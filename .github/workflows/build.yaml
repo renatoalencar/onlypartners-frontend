@@ -19,3 +19,7 @@ jobs:
         node-version: '12'
     - run: npm i 
     - run: lein cljsbuild once min
+    - run: |
+        git add -A
+        git commit -m 'GH Actions build'
+        git push origin master
