@@ -14,4 +14,4 @@ jobs:
     - uses: DeLaGuardo/setup-clojure@master
       with:
         lein: 2.9.4
-    - run: lein cljsbuild
+    - run: lein cljsbuild once min
