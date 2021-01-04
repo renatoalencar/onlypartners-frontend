@@ -20,6 +20,8 @@ jobs:
     - run: npm i 
     - run: lein cljsbuild once min
     - run: |
+        git config --global user.name "Renato Alencar"
+        git config --glboal user.email "renatoalencar.73@gmail.com"
         git add -A
         git commit -m 'GH Actions build'
         git push origin master
