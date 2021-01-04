@@ -54,8 +54,8 @@
                                :asset-path    "js/compiled/out"
                                :output-to     "resources/public/js/compiled/out/index.js"
                                :output-dir    "resources/public/js/compiled/min"
-                               :bundle-cmd    {:none    ["npx.cmd" "webpack" "--mode=production"]
-                                               :default ["npx.cmd" "webpack"]}
+                               :bundle-cmd    {:none    ["npx" "webpack" "--mode=production"]
+                                               :default ["npx" "webpack"]}
                                :optimizations :advanced}}]}
 
   :figwheel {;; :http-server-root "public" ;; default and assumes "resources"
