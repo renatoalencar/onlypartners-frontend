@@ -1,0 +1,1 @@
+{:output-dir "resources/public/js/compiled/min", :externs ["closure-js/externs"], :optimizations :advanced, :output-to "resources/public/js/compiled/out/index.js", :asset-path "js/compiled/out", :bundle-cmd {:none ["npx" "webpack" "--mode=production"], :default ["npx" "webpack"]}, :output-wrapper true, :libs ["closure-js/libs"], :target :bundle, :main onlypartners.core}
