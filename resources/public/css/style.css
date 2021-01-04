@@ -1,0 +1,280 @@
+html, body {
+  font-family: 'Source Sans Pro', sans-serif;
+  color: #001233;
+  background: white;
+  font-size: 16px;
+}
+
+html {
+  height: 100%;
+}
+
+body {
+  background: rgba(151, 157, 172, 0.1);
+  min-height: 100%;
+}
+
+main {
+  max-width: 800px;
+  margin: auto;
+  padding: 18px;
+}
+
+#app {
+  height: 100%;
+  width: 100%;
+}
+
+#splash-screen {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100%;
+  background: url("/img/background.svg") no-repeat;
+  background-size: 100% auto;
+}
+
+.link {
+  color: #0466C8;
+  text-decoration: none;
+}
+
+.group-profile {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  flex: 1;
+}
+
+.order-description .group-profile {
+  flex-direction: row;
+  align-items: flex-start;
+}
+
+.group-profile__picture {
+  width: 160px;
+  height: 160px;
+  border-radius: 80px;
+  margin-top: 10px;
+}
+
+.payment-confirmation .group-profile__picture,
+.order-description .group-profile__picture {
+  width: 80px;
+  height: 80px;
+  border-radius: 40px;
+  margin-right: 10px;
+  margin-top: 0;
+}
+
+.group-profile__name {
+  font-size: 20px;
+  margin: 16px 0;
+}
+
+.plan-selection {
+  padding: 18px;
+}
+
+.plan-selection__content {
+  display: flex;
+  flex-direction: column;
+}
+
+@media(min-width: 700px) {
+  .plan-selection__content {
+    flex-direction: row;
+  }
+
+  .plan-selection__subscribe-button {
+    float: right;
+  }
+}
+
+.plan-list {
+  padding: 0;
+  flex: 3;
+}
+
+.card {
+  background: white;
+  padding: 14px;
+  margin: 10px 0;
+  border-radius: 2px;
+  box-shadow: 0px 0px 5px 1px rgba(3, 83, 164, 0.04);
+}
+
+.plan-card {
+  list-style: none;
+}
+
+.plan-card--selected {
+  border: 2px solid #0466C8;
+  padding: 12px;
+}
+
+.plan-card__price {
+  float: right;
+}
+
+.plan-card__title {
+  margin-top: 0;
+}
+
+.plan-card__description {
+  margin-bottom: 0;
+}
+
+.button {
+  border: none;
+  height: 42px;
+  padding: 0 40px;
+
+  font-size: 14px;
+  font-weight: 700;
+  color: white;
+
+  background: #0353A4;
+  border-radius: 9px;
+  box-shadow: 0px 0px 4px 1px rgba(3, 83, 164, 0.15);
+
+  width: 100%;
+}
+
+.payment-information {
+  display: flex;
+  flex-direction: column
+}
+
+@media(min-width: 700px) {
+  .payment-information {
+    flex-direction: row;
+  }
+
+  .button {
+    width: initial;
+  }
+}
+
+.payment-information__form {
+  flex: 2;
+
+  display: flex;
+  flex-direction: column;
+}
+
+.payment-information__error {
+  margin-bottom: 10px;
+  color: #f94144;
+}
+
+.label {
+  font-weight: 700;
+  margin-bottom: 8px;
+}
+
+.field {
+  border: none;
+  border-bottom: 1px solid #0353A4;
+  padding: 10px 5px;
+  margin-bottom: 20px;
+
+  /* Reset Safari awful input styles */
+  -webkit-appearance: none;
+  outline: none;
+  border-radius: 0;
+}
+
+.field--invalid {
+  border: 1.5px solid #f94144;
+}
+
+.field__error {
+  color: #f94144;
+  font-size: 14px;
+  padding: 4px 0;
+}
+
+.divider {
+  border: 1px dashed rgba(0, 18, 51, 0.4);
+}
+
+.order-description {
+  flex: 1;
+}
+
+@media(min-width: 700px) {
+  .order-description {
+    margin-right: 10px;
+  }
+}
+
+.order-description__items {
+  padding: 0;
+  list-style: none;
+  margin: 10px 0;
+}
+
+.order-description__items li {
+  padding: 4px 0;
+}
+
+.order-description__items__name {
+  font-weight: 700;
+  float: right;
+}
+
+.payment-confirmation {
+  padding: 40px 0;
+  text-align: center;
+  max-width: 300px;
+}
+
+.landing-page {
+  background-image: url("/img/landing-page-background.png");
+  background-repeat: no-repeat;
+  background-size: 60% auto;
+  background-position: right top;
+}
+
+.landing-page__title-container {
+  width: 460px;
+  margin-top: 80px;
+  margin-bottom: 40px;
+}
+
+.landing-page__telegram-img {
+  display: block;
+  float: right;
+}
+
+@media(max-width: 460px) {
+  .landing-page__title-container {
+    width: 100%;
+  }
+
+  .landing-page__telegram-img {
+    display: none;
+  }
+}
+
+.landing-page__title em {
+  font-style: normal;
+  color: #0466C8;
+}
+
+.landing-page__cta {
+  display: inline-block;
+  text-decoration: none;
+  text-align: center;
+  line-height: 45px;
+  padding-bottom: 14px;
+  width: 200px;
+  font-size: 20px;
+}
+
+.landing-page__main {
+  max-width: 1000px;
+  margin: auto;
+  padding-top: 60px;
+}
