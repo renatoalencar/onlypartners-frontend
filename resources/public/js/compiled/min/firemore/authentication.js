@@ -15,8 +15,8 @@ return null;
 }
 });
 firemore.authentication.login_anonymously_BANG_ = (function firemore$authentication$login_anonymously_BANG_(var_args){
-var G__28961 = arguments.length;
-switch (G__28961) {
+var G__28975 = arguments.length;
+switch (G__28975) {
 case 0:
 return firemore.authentication.login_anonymously_BANG_.cljs$core$IFn$_invoke$arity$0();
 
@@ -48,8 +48,8 @@ return cljs.core.reset_BANG_.call(null,firemore.authentication.signing_in_QMARK_
 (firemore.authentication.login_anonymously_BANG_.cljs$lang$maxFixedArity = 1);
 
 firemore.authentication.logout_BANG_ = (function firemore$authentication$logout_BANG_(var_args){
-var G__28964 = arguments.length;
-switch (G__28964) {
+var G__28978 = arguments.length;
+switch (G__28978) {
 case 0:
 return firemore.authentication.logout_BANG_.cljs$core$IFn$_invoke$arity$0();
 
@@ -76,90 +76,90 @@ return firemore.firebase.auth.call(null,fb).signOut();
 
 firemore.authentication.uid = (function firemore$authentication$uid(){
 var c = cljs.core.async.chan.call(null);
-var c__24626__auto___28997 = cljs.core.async.chan.call(null,(1));
+var c__24640__auto___29011 = cljs.core.async.chan.call(null,(1));
 cljs.core.async.impl.dispatch.run.call(null,(function (){
-var f__24627__auto__ = (function (){var switch__24459__auto__ = (function (state_28982){
-var state_val_28983 = (state_28982[(1)]);
-if((state_val_28983 === (1))){
-var state_28982__$1 = state_28982;
-var statearr_28984_28998 = state_28982__$1;
-(statearr_28984_28998[(2)] = null);
+var f__24641__auto__ = (function (){var switch__24473__auto__ = (function (state_28996){
+var state_val_28997 = (state_28996[(1)]);
+if((state_val_28997 === (1))){
+var state_28996__$1 = state_28996;
+var statearr_28998_29012 = state_28996__$1;
+(statearr_28998_29012[(2)] = null);
 
-(statearr_28984_28998[(1)] = (2));
+(statearr_28998_29012[(1)] = (2));
 
 
 return new cljs.core.Keyword(null,"recur","recur",-437573268);
 } else {
-if((state_val_28983 === (2))){
-var inst_28968 = (state_28982[(7)]);
-var inst_28967 = cljs.core.deref.call(null,firemore.authentication.user_atom);
-var inst_28968__$1 = new cljs.core.Keyword(null,"uid","uid",-1447769400).cljs$core$IFn$_invoke$arity$1(inst_28967);
-var state_28982__$1 = (function (){var statearr_28985 = state_28982;
-(statearr_28985[(7)] = inst_28968__$1);
+if((state_val_28997 === (2))){
+var inst_28982 = (state_28996[(7)]);
+var inst_28981 = cljs.core.deref.call(null,firemore.authentication.user_atom);
+var inst_28982__$1 = new cljs.core.Keyword(null,"uid","uid",-1447769400).cljs$core$IFn$_invoke$arity$1(inst_28981);
+var state_28996__$1 = (function (){var statearr_28999 = state_28996;
+(statearr_28999[(7)] = inst_28982__$1);
 
-return statearr_28985;
+return statearr_28999;
 })();
-if(cljs.core.truth_(inst_28968__$1)){
-var statearr_28986_28999 = state_28982__$1;
-(statearr_28986_28999[(1)] = (4));
+if(cljs.core.truth_(inst_28982__$1)){
+var statearr_29000_29013 = state_28996__$1;
+(statearr_29000_29013[(1)] = (4));
 
 } else {
-var statearr_28987_29000 = state_28982__$1;
-(statearr_28987_29000[(1)] = (5));
+var statearr_29001_29014 = state_28996__$1;
+(statearr_29001_29014[(1)] = (5));
 
 }
 
 return new cljs.core.Keyword(null,"recur","recur",-437573268);
 } else {
-if((state_val_28983 === (3))){
-var inst_28980 = (state_28982[(2)]);
-var state_28982__$1 = state_28982;
-return cljs.core.async.impl.ioc_helpers.return_chan.call(null,state_28982__$1,inst_28980);
+if((state_val_28997 === (3))){
+var inst_28994 = (state_28996[(2)]);
+var state_28996__$1 = state_28996;
+return cljs.core.async.impl.ioc_helpers.return_chan.call(null,state_28996__$1,inst_28994);
 } else {
-if((state_val_28983 === (4))){
-var inst_28968 = (state_28982[(7)]);
-var inst_28970 = cljs.core.async.put_BANG_.call(null,c,inst_28968);
-var state_28982__$1 = state_28982;
-var statearr_28988_29001 = state_28982__$1;
-(statearr_28988_29001[(2)] = inst_28970);
+if((state_val_28997 === (4))){
+var inst_28982 = (state_28996[(7)]);
+var inst_28984 = cljs.core.async.put_BANG_.call(null,c,inst_28982);
+var state_28996__$1 = state_28996;
+var statearr_29002_29015 = state_28996__$1;
+(statearr_29002_29015[(2)] = inst_28984);
 
-(statearr_28988_29001[(1)] = (6));
+(statearr_29002_29015[(1)] = (6));
 
 
 return new cljs.core.Keyword(null,"recur","recur",-437573268);
 } else {
-if((state_val_28983 === (5))){
-var inst_28972 = firemore.authentication.login_anonymously_BANG_.call(null);
-var inst_28973 = cljs.core.async.timeout.call(null,(1000));
-var state_28982__$1 = (function (){var statearr_28989 = state_28982;
-(statearr_28989[(8)] = inst_28972);
+if((state_val_28997 === (5))){
+var inst_28986 = firemore.authentication.login_anonymously_BANG_.call(null);
+var inst_28987 = cljs.core.async.timeout.call(null,(1000));
+var state_28996__$1 = (function (){var statearr_29003 = state_28996;
+(statearr_29003[(8)] = inst_28986);
 
-return statearr_28989;
+return statearr_29003;
 })();
-return cljs.core.async.impl.ioc_helpers.take_BANG_.call(null,state_28982__$1,(7),inst_28973);
+return cljs.core.async.impl.ioc_helpers.take_BANG_.call(null,state_28996__$1,(7),inst_28987);
 } else {
-if((state_val_28983 === (6))){
-var inst_28978 = (state_28982[(2)]);
-var state_28982__$1 = state_28982;
-var statearr_28990_29002 = state_28982__$1;
-(statearr_28990_29002[(2)] = inst_28978);
+if((state_val_28997 === (6))){
+var inst_28992 = (state_28996[(2)]);
+var state_28996__$1 = state_28996;
+var statearr_29004_29016 = state_28996__$1;
+(statearr_29004_29016[(2)] = inst_28992);
 
-(statearr_28990_29002[(1)] = (3));
+(statearr_29004_29016[(1)] = (3));
 
 
 return new cljs.core.Keyword(null,"recur","recur",-437573268);
 } else {
-if((state_val_28983 === (7))){
-var inst_28975 = (state_28982[(2)]);
-var state_28982__$1 = (function (){var statearr_28991 = state_28982;
-(statearr_28991[(9)] = inst_28975);
+if((state_val_28997 === (7))){
+var inst_28989 = (state_28996[(2)]);
+var state_28996__$1 = (function (){var statearr_29005 = state_28996;
+(statearr_29005[(9)] = inst_28989);
 
-return statearr_28991;
+return statearr_29005;
 })();
-var statearr_28992_29003 = state_28982__$1;
-(statearr_28992_29003[(2)] = null);
+var statearr_29006_29017 = state_28996__$1;
+(statearr_29006_29017[(2)] = null);
 
-(statearr_28992_29003[(1)] = (2));
+(statearr_29006_29017[(1)] = (2));
 
 
 return new cljs.core.Keyword(null,"recur","recur",-437573268);
@@ -174,70 +174,70 @@ return null;
 }
 });
 return (function() {
-var firemore$authentication$uid_$_state_machine__24460__auto__ = null;
-var firemore$authentication$uid_$_state_machine__24460__auto____0 = (function (){
-var statearr_28993 = [null,null,null,null,null,null,null,null,null,null];
-(statearr_28993[(0)] = firemore$authentication$uid_$_state_machine__24460__auto__);
+var firemore$authentication$uid_$_state_machine__24474__auto__ = null;
+var firemore$authentication$uid_$_state_machine__24474__auto____0 = (function (){
+var statearr_29007 = [null,null,null,null,null,null,null,null,null,null];
+(statearr_29007[(0)] = firemore$authentication$uid_$_state_machine__24474__auto__);
 
-(statearr_28993[(1)] = (1));
+(statearr_29007[(1)] = (1));
 
-return statearr_28993;
+return statearr_29007;
 });
-var firemore$authentication$uid_$_state_machine__24460__auto____1 = (function (state_28982){
+var firemore$authentication$uid_$_state_machine__24474__auto____1 = (function (state_28996){
 while(true){
-var ret_value__24461__auto__ = (function (){try{while(true){
-var result__24462__auto__ = switch__24459__auto__.call(null,state_28982);
-if(cljs.core.keyword_identical_QMARK_.call(null,result__24462__auto__,new cljs.core.Keyword(null,"recur","recur",-437573268))){
+var ret_value__24475__auto__ = (function (){try{while(true){
+var result__24476__auto__ = switch__24473__auto__.call(null,state_28996);
+if(cljs.core.keyword_identical_QMARK_.call(null,result__24476__auto__,new cljs.core.Keyword(null,"recur","recur",-437573268))){
 continue;
 } else {
-return result__24462__auto__;
+return result__24476__auto__;
 }
 break;
 }
-}catch (e28994){if((e28994 instanceof Object)){
-var ex__24463__auto__ = e28994;
-var statearr_28995_29004 = state_28982;
-(statearr_28995_29004[(5)] = ex__24463__auto__);
+}catch (e29008){if((e29008 instanceof Object)){
+var ex__24477__auto__ = e29008;
+var statearr_29009_29018 = state_28996;
+(statearr_29009_29018[(5)] = ex__24477__auto__);
 
 
-cljs.core.async.impl.ioc_helpers.process_exception.call(null,state_28982);
+cljs.core.async.impl.ioc_helpers.process_exception.call(null,state_28996);
 
 return new cljs.core.Keyword(null,"recur","recur",-437573268);
 } else {
-throw e28994;
+throw e29008;
 
 }
 }})();
-if(cljs.core.keyword_identical_QMARK_.call(null,ret_value__24461__auto__,new cljs.core.Keyword(null,"recur","recur",-437573268))){
-var G__29005 = state_28982;
-state_28982 = G__29005;
+if(cljs.core.keyword_identical_QMARK_.call(null,ret_value__24475__auto__,new cljs.core.Keyword(null,"recur","recur",-437573268))){
+var G__29019 = state_28996;
+state_28996 = G__29019;
 continue;
 } else {
-return ret_value__24461__auto__;
+return ret_value__24475__auto__;
 }
 break;
 }
 });
-firemore$authentication$uid_$_state_machine__24460__auto__ = function(state_28982){
+firemore$authentication$uid_$_state_machine__24474__auto__ = function(state_28996){
 switch(arguments.length){
 case 0:
-return firemore$authentication$uid_$_state_machine__24460__auto____0.call(this);
+return firemore$authentication$uid_$_state_machine__24474__auto____0.call(this);
 case 1:
-return firemore$authentication$uid_$_state_machine__24460__auto____1.call(this,state_28982);
+return firemore$authentication$uid_$_state_machine__24474__auto____1.call(this,state_28996);
 }
 throw(new Error('Invalid arity: ' + arguments.length));
 };
-firemore$authentication$uid_$_state_machine__24460__auto__.cljs$core$IFn$_invoke$arity$0 = firemore$authentication$uid_$_state_machine__24460__auto____0;
-firemore$authentication$uid_$_state_machine__24460__auto__.cljs$core$IFn$_invoke$arity$1 = firemore$authentication$uid_$_state_machine__24460__auto____1;
-return firemore$authentication$uid_$_state_machine__24460__auto__;
+firemore$authentication$uid_$_state_machine__24474__auto__.cljs$core$IFn$_invoke$arity$0 = firemore$authentication$uid_$_state_machine__24474__auto____0;
+firemore$authentication$uid_$_state_machine__24474__auto__.cljs$core$IFn$_invoke$arity$1 = firemore$authentication$uid_$_state_machine__24474__auto____1;
+return firemore$authentication$uid_$_state_machine__24474__auto__;
 })()
 })();
-var state__24628__auto__ = (function (){var statearr_28996 = f__24627__auto__.call(null);
-(statearr_28996[(6)] = c__24626__auto___28997);
+var state__24642__auto__ = (function (){var statearr_29010 = f__24641__auto__.call(null);
+(statearr_29010[(6)] = c__24640__auto___29011);
 
-return statearr_28996;
+return statearr_29010;
 })();
-return cljs.core.async.impl.ioc_helpers.run_state_machine_wrapped.call(null,state__24628__auto__);
+return cljs.core.async.impl.ioc_helpers.run_state_machine_wrapped.call(null,state__24642__auto__);
 }));
 
 

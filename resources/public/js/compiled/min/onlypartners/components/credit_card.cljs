@@ -54,11 +54,22 @@
                      :value         year}]]))])))
 
 (defn card-owner-field []
-  [:<>
-   [:label.label {:for :name} "Nome do Titular"]
-   [:input#name.field {:type          :text
-                       :data-checkout :cardholderName
-                       :placeholder   "JOAQUIM M M ASSIS"}]])
+  (let [owner (r/atom "")
+        [error validate!] (validation/use-validation "Nome é obrigatório" empty?)]
+    (fn []
+      [:<>
+       [:label.label {:for :name} "Nome do Titular"]
+
+       (when (error)
+         [:span.field__error (error)])
+
+       [:input#name.field {:class         (util/classes :field--invalid #(some? (error)))
+                           :type          :text
+                           :data-checkout :cardholderName
+                           :value         @owner
+                           :on-change     #(reset! owner (-> % .-target .-value))
+                           :on-blur       #(validate! @owner)
+                           :placeholder   "JOAQUIM M M ASSIS"}]])))
 
 (def ^:private card-number-pattern
   (let [number "(\\d{0,4})"
@@ -78,25 +89,39 @@
     (string/join " " (filter boolean parts))))
 
 (defn card-number-field []
-  (let [[card-number set-card-number!] (mask/use-mask valid-card-number? format-card-number)]
+  (let [[card-number set-card-number!] (mask/use-mask valid-card-number? format-card-number)
+        [error validate!] (validation/use-validation "Número do cartão é obrigatório" empty?)]
     (fn []
       [:<>
        [:label.label {:for :card-number} "Número do cartão"]
-       [:input#card-number.field {:type          :text
+
+       (when (error)
+         [:span.field__error (error)])
+
+       [:input#card-number.field {:class         (util/classes :field--invalid #(some? (error)))
+                                  :type          :text
                                   :data-checkout :cardNumber
                                   :value         (card-number)
                                   :on-change     #(set-card-number! (-> % .-target .-value))
+                                  :on-blur       #(validate! (card-number))
                                   :inputMode     :numeric
                                   :placeholder   "1234 5678 9012 3456"}]])))
 
 (defn card-security-code-field []
-  (let [[security-code set-security-code!] (mask/use-mask (partial re-matches #"^\d{0,3}$"))]
+  (let [[security-code set-security-code!] (mask/use-mask (partial re-matches #"^\d{0,3}$"))
+        [error validate!] (validation/use-validation "Código é obrigatório" empty?)]
     (fn []
       [:<>
        [:label.label {:for :verification-code} "Código de verificação"]
-       [:input#verification-code.field {:type          :text
+
+       (when (error)
+         [:span.field__error (error)])
+
+       [:input#verification-code.field {:class         (util/classes :field--invalid #(some? (error)))
+                                        :type          :text
                                         :data-checkout :securityCode
                                         :value         (security-code)
                                         :on-change     #(set-security-code! (-> % .-target .-value))
+                                        :on-blur       #(validate! (security-code))
                                         :inputMode     :numeric
                                         :placeholder   "000"}]])))

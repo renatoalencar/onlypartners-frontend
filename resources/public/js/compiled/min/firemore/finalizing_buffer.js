@@ -41,12 +41,12 @@ return this$__$1;
 (firemore.finalizing_buffer.FinalizingBuffer.prototype.cljs$core$async$impl$protocols$Buffer$close_buf_BANG_$arity$1 = (function (this$){
 var self__ = this;
 var this$__$1 = this;
-var G__23196 = self__.opts;
-var G__23196__$1 = (((G__23196 == null))?null:new cljs.core.Keyword(null,"on-close","on-close",-761178394).cljs$core$IFn$_invoke$arity$1(G__23196));
-if((G__23196__$1 == null)){
+var G__23206 = self__.opts;
+var G__23206__$1 = (((G__23206 == null))?null:new cljs.core.Keyword(null,"on-close","on-close",-761178394).cljs$core$IFn$_invoke$arity$1(G__23206));
+if((G__23206__$1 == null)){
 return null;
 } else {
-return cljs.core.apply.call(null,G__23196__$1,new cljs.core.PersistentVector(null, 1, 5, cljs.core.PersistentVector.EMPTY_NODE, [this$__$1], null));
+return cljs.core.apply.call(null,G__23206__$1,new cljs.core.PersistentVector(null, 1, 5, cljs.core.PersistentVector.EMPTY_NODE, [this$__$1], null));
 }
 }));
 
@@ -76,8 +76,8 @@ return (new firemore.finalizing_buffer.FinalizingBuffer(buf,n,opts));
 });
 
 firemore.finalizing_buffer.create = (function firemore$finalizing_buffer$create(var_args){
-var G__23198 = arguments.length;
-switch (G__23198) {
+var G__23208 = arguments.length;
+switch (G__23208) {
 case 1:
 return firemore.finalizing_buffer.create.cljs$core$IFn$_invoke$arity$1((arguments[(0)]));
 

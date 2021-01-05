@@ -40,5 +40,8 @@
 (defn report-error [error]
   (swap! db assoc :error error))
 
+(defn register-payment [payment]
+  (swap! db assoc :payment payment))
+
 (defn step-to [step]
   (swap! db assoc :step step))
