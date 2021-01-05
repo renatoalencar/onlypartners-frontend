@@ -1,7 +1,6 @@
-// Compiled by ClojureScript 1.10.773 {:static-fns true, :optimize-constants true, :target :nodejs}
+// Compiled by ClojureScript 1.10.773 {:target :nodejs}
 goog.provide('firemore.finalizing_buffer');
 goog.require('cljs.core');
-goog.require('cljs.core.constants');
 goog.require('cljs.core.async.impl.buffers');
 goog.require('cljs.core.async.impl.protocols');
 
@@ -42,12 +41,12 @@ return this$__$1;
 (firemore.finalizing_buffer.FinalizingBuffer.prototype.cljs$core$async$impl$protocols$Buffer$close_buf_BANG_$arity$1 = (function (this$){
 var self__ = this;
 var this$__$1 = this;
-var G__26726 = self__.opts;
-var G__26726__$1 = (((G__26726 == null))?null:cljs.core.cst$kw$on_DASH_close.cljs$core$IFn$_invoke$arity$1(G__26726));
-if((G__26726__$1 == null)){
+var G__23196 = self__.opts;
+var G__23196__$1 = (((G__23196 == null))?null:new cljs.core.Keyword(null,"on-close","on-close",-761178394).cljs$core$IFn$_invoke$arity$1(G__23196));
+if((G__23196__$1 == null)){
 return null;
 } else {
-return cljs.core.apply.cljs$core$IFn$_invoke$arity$2(G__26726__$1,new cljs.core.PersistentVector(null, 1, 5, cljs.core.PersistentVector.EMPTY_NODE, [this$__$1], null));
+return cljs.core.apply.call(null,G__23196__$1,new cljs.core.PersistentVector(null, 1, 5, cljs.core.PersistentVector.EMPTY_NODE, [this$__$1], null));
 }
 }));
 
@@ -58,7 +57,7 @@ return self__.buf.length;
 }));
 
 (firemore.finalizing_buffer.FinalizingBuffer.getBasis = (function (){
-return new cljs.core.PersistentVector(null, 3, 5, cljs.core.PersistentVector.EMPTY_NODE, [cljs.core.cst$sym$buf,cljs.core.cst$sym$n,cljs.core.cst$sym$opts], null);
+return new cljs.core.PersistentVector(null, 3, 5, cljs.core.PersistentVector.EMPTY_NODE, [new cljs.core.Symbol(null,"buf","buf",1426618187,null),new cljs.core.Symbol(null,"n","n",-2092305744,null),new cljs.core.Symbol(null,"opts","opts",1795607228,null)], null);
 }));
 
 (firemore.finalizing_buffer.FinalizingBuffer.cljs$lang$type = true);
@@ -66,7 +65,7 @@ return new cljs.core.PersistentVector(null, 3, 5, cljs.core.PersistentVector.EMP
 (firemore.finalizing_buffer.FinalizingBuffer.cljs$lang$ctorStr = "firemore.finalizing-buffer/FinalizingBuffer");
 
 (firemore.finalizing_buffer.FinalizingBuffer.cljs$lang$ctorPrWriter = (function (this__4369__auto__,writer__4370__auto__,opt__4371__auto__){
-return cljs.core._write(writer__4370__auto__,"firemore.finalizing-buffer/FinalizingBuffer");
+return cljs.core._write.call(null,writer__4370__auto__,"firemore.finalizing-buffer/FinalizingBuffer");
 }));
 
 /**
@@ -77,8 +76,8 @@ return (new firemore.finalizing_buffer.FinalizingBuffer(buf,n,opts));
 });
 
 firemore.finalizing_buffer.create = (function firemore$finalizing_buffer$create(var_args){
-var G__26728 = arguments.length;
-switch (G__26728) {
+var G__23198 = arguments.length;
+switch (G__23198) {
 case 1:
 return firemore.finalizing_buffer.create.cljs$core$IFn$_invoke$arity$1((arguments[(0)]));
 
@@ -94,12 +93,14 @@ throw (new Error(["Invalid arity: ",cljs.core.str.cljs$core$IFn$_invoke$arity$1(
 });
 
 (firemore.finalizing_buffer.create.cljs$core$IFn$_invoke$arity$1 = (function (n){
-return firemore.finalizing_buffer.create.cljs$core$IFn$_invoke$arity$2(n,cljs.core.PersistentArrayMap.EMPTY);
+return firemore.finalizing_buffer.create.call(null,n,cljs.core.PersistentArrayMap.EMPTY);
 }));
 
 (firemore.finalizing_buffer.create.cljs$core$IFn$_invoke$arity$2 = (function (n,opts){
-return (new firemore.finalizing_buffer.FinalizingBuffer(cljs.core.async.impl.buffers.ring_buffer(n),n,opts));
+return (new firemore.finalizing_buffer.FinalizingBuffer(cljs.core.async.impl.buffers.ring_buffer.call(null,n),n,opts));
 }));
 
 (firemore.finalizing_buffer.create.cljs$lang$maxFixedArity = 2);
 
+
+//# sourceMappingURL=finalizing_buffer.js.map

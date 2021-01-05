@@ -1,19 +1,21 @@
-// Compiled by ClojureScript 1.10.773 {:static-fns true, :optimize-constants true, :target :nodejs}
+// Compiled by ClojureScript 1.10.773 {:target :nodejs}
 goog.provide('firemore.firebase');
 goog.require('cljs.core');
-goog.require('cljs.core.constants');
+goog.require('firebase.app');
+goog.require('firebase.auth');
+goog.require('firebase.firestore');
 goog.require('firemore.config');
-firemore.firebase.FB = cljs.core.atom.cljs$core$IFn$_invoke$arity$1(null);
+firemore.firebase.FB = cljs.core.atom.call(null,null);
 firemore.firebase.https = (function firemore$firebase$https(var_args){
 var args__4742__auto__ = [];
-var len__4736__auto___30001 = arguments.length;
-var i__4737__auto___30002 = (0);
+var len__4736__auto___28451 = arguments.length;
+var i__4737__auto___28452 = (0);
 while(true){
-if((i__4737__auto___30002 < len__4736__auto___30001)){
-args__4742__auto__.push((arguments[i__4737__auto___30002]));
+if((i__4737__auto___28452 < len__4736__auto___28451)){
+args__4742__auto__.push((arguments[i__4737__auto___28452]));
 
-var G__30003 = (i__4737__auto___30002 + (1));
-i__4737__auto___30002 = G__30003;
+var G__28453 = (i__4737__auto___28452 + (1));
+i__4737__auto___28452 = G__28453;
 continue;
 } else {
 }
@@ -25,19 +27,19 @@ return firemore.firebase.https.cljs$core$IFn$_invoke$arity$variadic(argseq__4743
 });
 
 (firemore.firebase.https.cljs$core$IFn$_invoke$arity$variadic = (function (ds){
-return cljs.core.apply.cljs$core$IFn$_invoke$arity$3(cljs.core.str,"https://",ds);
+return cljs.core.apply.call(null,cljs.core.str,"https://",ds);
 }));
 
 (firemore.firebase.https.cljs$lang$maxFixedArity = (0));
 
 /** @this {Function} */
-(firemore.firebase.https.cljs$lang$applyTo = (function (seq30000){
+(firemore.firebase.https.cljs$lang$applyTo = (function (seq28450){
 var self__4724__auto__ = this;
-return self__4724__auto__.cljs$core$IFn$_invoke$arity$variadic(cljs.core.seq(seq30000));
+return self__4724__auto__.cljs$core$IFn$_invoke$arity$variadic(cljs.core.seq.call(null,seq28450));
 }));
 
 firemore.firebase.database_url = (function firemore$firebase$database_url(firebase_project_id){
-return firemore.firebase.https.cljs$core$IFn$_invoke$arity$variadic(cljs.core.prim_seq.cljs$core$IFn$_invoke$arity$2([firebase_project_id,".firebaseio.com"], 0));
+return firemore.firebase.https.call(null,firebase_project_id,".firebaseio.com");
 });
 firemore.firebase.storage_bucket = (function firemore$firebase$storage_bucket(firebase_project_id){
 return [cljs.core.str.cljs$core$IFn$_invoke$arity$1(firebase_project_id),".appspot.com"].join('');
@@ -45,23 +47,23 @@ return [cljs.core.str.cljs$core$IFn$_invoke$arity$1(firebase_project_id),".appsp
 firemore.firebase.auth_domain = (function firemore$firebase$auth_domain(firebase_project_id){
 return [cljs.core.str.cljs$core$IFn$_invoke$arity$1(firebase_project_id),".firebaseapp.com"].join('');
 });
-firemore.firebase.overrides = cljs.core.atom.cljs$core$IFn$_invoke$arity$1(null);
+firemore.firebase.overrides = cljs.core.atom.call(null,null);
 firemore.firebase.opts__GT_js_opts = (function firemore$firebase$opts__GT_js_opts(config){
-var map__30004 = config;
-var map__30004__$1 = (((((!((map__30004 == null))))?(((((map__30004.cljs$lang$protocol_mask$partition0$ & (64))) || ((cljs.core.PROTOCOL_SENTINEL === map__30004.cljs$core$ISeq$))))?true:false):false))?cljs.core.apply.cljs$core$IFn$_invoke$arity$2(cljs.core.hash_map,map__30004):map__30004);
-var api_key = cljs.core.get.cljs$core$IFn$_invoke$arity$2(map__30004__$1,cljs.core.cst$kw$api_DASH_key);
-var project_id = cljs.core.get.cljs$core$IFn$_invoke$arity$2(map__30004__$1,cljs.core.cst$kw$project_DASH_id);
-var extra_overrides = cljs.core.dissoc.cljs$core$IFn$_invoke$arity$variadic(config,cljs.core.cst$kw$api_DASH_key,cljs.core.prim_seq.cljs$core$IFn$_invoke$arity$2([cljs.core.cst$kw$project_DASH_id], 0));
-if(cljs.core.empty_QMARK_(extra_overrides)){
+var map__28454 = config;
+var map__28454__$1 = (((((!((map__28454 == null))))?(((((map__28454.cljs$lang$protocol_mask$partition0$ & (64))) || ((cljs.core.PROTOCOL_SENTINEL === map__28454.cljs$core$ISeq$))))?true:false):false))?cljs.core.apply.call(null,cljs.core.hash_map,map__28454):map__28454);
+var api_key = cljs.core.get.call(null,map__28454__$1,new cljs.core.Keyword(null,"api-key","api-key",1037904031));
+var project_id = cljs.core.get.call(null,map__28454__$1,new cljs.core.Keyword(null,"project-id","project-id",206449307));
+var extra_overrides = cljs.core.dissoc.call(null,config,new cljs.core.Keyword(null,"api-key","api-key",1037904031),new cljs.core.Keyword(null,"project-id","project-id",206449307));
+if(cljs.core.empty_QMARK_.call(null,extra_overrides)){
 } else {
-cljs.core.reset_BANG_(firemore.firebase.overrides,extra_overrides);
+cljs.core.reset_BANG_.call(null,firemore.firebase.overrides,extra_overrides);
 }
 
-return new cljs.core.PersistentArrayMap(null, 3, [cljs.core.cst$kw$apiKey,api_key,cljs.core.cst$kw$authDomain,firemore.firebase.auth_domain(project_id),cljs.core.cst$kw$projectId,project_id], null);
+return new cljs.core.PersistentArrayMap(null, 3, [new cljs.core.Keyword(null,"apiKey","apiKey",-942818613),api_key,new cljs.core.Keyword(null,"authDomain","authDomain",-1125516118),firemore.firebase.auth_domain.call(null,project_id),new cljs.core.Keyword(null,"projectId","projectId",-1551013096),project_id], null);
 });
 firemore.firebase.initialize = (function firemore$firebase$initialize(var_args){
-var G__30007 = arguments.length;
-switch (G__30007) {
+var G__28457 = arguments.length;
+switch (G__28457) {
 case 0:
 return firemore.firebase.initialize.cljs$core$IFn$_invoke$arity$0();
 
@@ -77,23 +79,23 @@ throw (new Error(["Invalid arity: ",cljs.core.str.cljs$core$IFn$_invoke$arity$1(
 });
 
 (firemore.firebase.initialize.cljs$core$IFn$_invoke$arity$0 = (function (){
-return firemore.firebase.initialize.cljs$core$IFn$_invoke$arity$1(firemore.config.default_firebase_config);
+return firemore.firebase.initialize.call(null,firemore.config.default_firebase_config);
 }));
 
 (firemore.firebase.initialize.cljs$core$IFn$_invoke$arity$1 = (function (opts){
-var js_opts = cljs.core.clj__GT_js(firemore.firebase.opts__GT_js_opts(opts));
+var js_opts = cljs.core.clj__GT_js.call(null,firemore.firebase.opts__GT_js_opts.call(null,opts));
 var app = firebase.initializeApp(js_opts);
-return cljs.core.reset_BANG_(firemore.firebase.FB,app);
+return cljs.core.reset_BANG_.call(null,firemore.firebase.FB,app);
 }));
 
 (firemore.firebase.initialize.cljs$lang$maxFixedArity = 1);
 
 firemore.firebase.db = (function firemore$firebase$db(firebase){
 var db = firebase.firestore();
-var temp__5720__auto___30009 = cljs.core.deref(firemore.firebase.overrides);
-if(cljs.core.truth_(temp__5720__auto___30009)){
-var overrides_30010 = temp__5720__auto___30009;
-db.settings(cljs.core.clj__GT_js(overrides_30010));
+var temp__5720__auto___28459 = cljs.core.deref.call(null,firemore.firebase.overrides);
+if(cljs.core.truth_(temp__5720__auto___28459)){
+var overrides_28460 = temp__5720__auto___28459;
+db.settings(cljs.core.clj__GT_js.call(null,overrides_28460));
 } else {
 }
 
@@ -102,3 +104,5 @@ return db;
 firemore.firebase.auth = (function firemore$firebase$auth(firebase){
 return firebase.auth();
 });
+
+//# sourceMappingURL=firebase.js.map

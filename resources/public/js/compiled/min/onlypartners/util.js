@@ -1,18 +1,17 @@
-// Compiled by ClojureScript 1.10.773 {:static-fns true, :optimize-constants true, :target :nodejs}
+// Compiled by ClojureScript 1.10.773 {:target :nodejs}
 goog.provide('onlypartners.util');
 goog.require('cljs.core');
-goog.require('cljs.core.constants');
 goog.require('clojure.string');
 onlypartners.util.create_number_formatter = (function onlypartners$util$create_number_formatter(var_args){
 var args__4742__auto__ = [];
-var len__4736__auto___26035 = arguments.length;
-var i__4737__auto___26036 = (0);
+var len__4736__auto___22075 = arguments.length;
+var i__4737__auto___22076 = (0);
 while(true){
-if((i__4737__auto___26036 < len__4736__auto___26035)){
-args__4742__auto__.push((arguments[i__4737__auto___26036]));
+if((i__4737__auto___22076 < len__4736__auto___22075)){
+args__4742__auto__.push((arguments[i__4737__auto___22076]));
 
-var G__26037 = (i__4737__auto___26036 + (1));
-i__4737__auto___26036 = G__26037;
+var G__22077 = (i__4737__auto___22076 + (1));
+i__4737__auto___22076 = G__22077;
 continue;
 } else {
 }
@@ -24,37 +23,37 @@ return onlypartners.util.create_number_formatter.cljs$core$IFn$_invoke$arity$var
 });
 
 (onlypartners.util.create_number_formatter.cljs$core$IFn$_invoke$arity$variadic = (function (language,options){
-return Intl.NumberFormat(language,cljs.core.clj__GT_js(cljs.core.apply.cljs$core$IFn$_invoke$arity$2(cljs.core.hash_map,options)));
+return Intl.NumberFormat(language,cljs.core.clj__GT_js.call(null,cljs.core.apply.call(null,cljs.core.hash_map,options)));
 }));
 
 (onlypartners.util.create_number_formatter.cljs$lang$maxFixedArity = (1));
 
 /** @this {Function} */
-(onlypartners.util.create_number_formatter.cljs$lang$applyTo = (function (seq26033){
-var G__26034 = cljs.core.first(seq26033);
-var seq26033__$1 = cljs.core.next(seq26033);
+(onlypartners.util.create_number_formatter.cljs$lang$applyTo = (function (seq22073){
+var G__22074 = cljs.core.first.call(null,seq22073);
+var seq22073__$1 = cljs.core.next.call(null,seq22073);
 var self__4723__auto__ = this;
-return self__4723__auto__.cljs$core$IFn$_invoke$arity$variadic(G__26034,seq26033__$1);
+return self__4723__auto__.cljs$core$IFn$_invoke$arity$variadic(G__22074,seq22073__$1);
 }));
 
 onlypartners.util.format_currency = (function onlypartners$util$format_currency(x){
-return onlypartners.util.create_number_formatter.cljs$core$IFn$_invoke$arity$variadic(undefined,cljs.core.prim_seq.cljs$core$IFn$_invoke$arity$2([cljs.core.cst$kw$style,"currency",cljs.core.cst$kw$currency,"BRL"], 0)).format(x);
+return onlypartners.util.create_number_formatter.call(null,undefined,new cljs.core.Keyword(null,"style","style",-496642736),"currency",new cljs.core.Keyword(null,"currency","currency",-898327568),"BRL").format(x);
 });
 onlypartners.util.printrn = (function onlypartners$util$printrn(x){
-cljs.core.prn.cljs$core$IFn$_invoke$arity$variadic(cljs.core.prim_seq.cljs$core$IFn$_invoke$arity$2([x], 0));
+cljs.core.prn.call(null,x);
 
 return x;
 });
 onlypartners.util.classes = (function onlypartners$util$classes(var_args){
 var args__4742__auto__ = [];
-var len__4736__auto___26041 = arguments.length;
-var i__4737__auto___26042 = (0);
+var len__4736__auto___22080 = arguments.length;
+var i__4737__auto___22081 = (0);
 while(true){
-if((i__4737__auto___26042 < len__4736__auto___26041)){
-args__4742__auto__.push((arguments[i__4737__auto___26042]));
+if((i__4737__auto___22081 < len__4736__auto___22080)){
+args__4742__auto__.push((arguments[i__4737__auto___22081]));
 
-var G__26043 = (i__4737__auto___26042 + (1));
-i__4737__auto___26042 = G__26043;
+var G__22082 = (i__4737__auto___22081 + (1));
+i__4737__auto___22081 = G__22082;
 continue;
 } else {
 }
@@ -66,22 +65,23 @@ return onlypartners.util.classes.cljs$core$IFn$_invoke$arity$variadic(argseq__47
 });
 
 (onlypartners.util.classes.cljs$core$IFn$_invoke$arity$variadic = (function (args){
-return clojure.string.join.cljs$core$IFn$_invoke$arity$2(" ",cljs.core.map.cljs$core$IFn$_invoke$arity$2(cljs.core.comp.cljs$core$IFn$_invoke$arity$2(cljs.core.name,cljs.core.first),cljs.core.filter.cljs$core$IFn$_invoke$arity$2((function (p1__26038_SHARP_){
-var fexpr__26040 = cljs.core.second(p1__26038_SHARP_);
-return (fexpr__26040.cljs$core$IFn$_invoke$arity$0 ? fexpr__26040.cljs$core$IFn$_invoke$arity$0() : fexpr__26040.call(null));
-}),cljs.core.apply.cljs$core$IFn$_invoke$arity$2(cljs.core.hash_map,args))));
+return clojure.string.join.call(null," ",cljs.core.map.call(null,cljs.core.comp.call(null,cljs.core.name,cljs.core.first),cljs.core.filter.call(null,(function (p1__22078_SHARP_){
+return cljs.core.second.call(null,p1__22078_SHARP_).call(null);
+}),cljs.core.apply.call(null,cljs.core.hash_map,args))));
 }));
 
 (onlypartners.util.classes.cljs$lang$maxFixedArity = (0));
 
 /** @this {Function} */
-(onlypartners.util.classes.cljs$lang$applyTo = (function (seq26039){
+(onlypartners.util.classes.cljs$lang$applyTo = (function (seq22079){
 var self__4724__auto__ = this;
-return self__4724__auto__.cljs$core$IFn$_invoke$arity$variadic(cljs.core.seq(seq26039));
+return self__4724__auto__.cljs$core$IFn$_invoke$arity$variadic(cljs.core.seq.call(null,seq22079));
 }));
 
 onlypartners.util.attach = (function onlypartners$util$attach(f,ref){
 return (function (props){
-return new cljs.core.PersistentVector(null, 2, 5, cljs.core.PersistentVector.EMPTY_NODE, [f,cljs.core.merge.cljs$core$IFn$_invoke$arity$variadic(cljs.core.prim_seq.cljs$core$IFn$_invoke$arity$2([cljs.core.deref(ref),props], 0))], null);
+return new cljs.core.PersistentVector(null, 2, 5, cljs.core.PersistentVector.EMPTY_NODE, [f,cljs.core.merge.call(null,cljs.core.deref.call(null,ref),props)], null);
 });
 });
+
+//# sourceMappingURL=util.js.map

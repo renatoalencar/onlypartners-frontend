@@ -1,11 +1,10 @@
-// Compiled by ClojureScript 1.10.773 {:static-fns true, :optimize-constants true, :target :nodejs}
+// Compiled by ClojureScript 1.10.773 {:target :nodejs}
 goog.provide('onlypartners.components.mask');
 goog.require('cljs.core');
-goog.require('cljs.core.constants');
 goog.require('reagent.core');
 onlypartners.components.mask.use_mask = (function onlypartners$components$mask$use_mask(var_args){
-var G__26674 = arguments.length;
-switch (G__26674) {
+var G__22956 = arguments.length;
+switch (G__22956) {
 case 2:
 return onlypartners.components.mask.use_mask.cljs$core$IFn$_invoke$arity$2((arguments[(0)]),(arguments[(1)]));
 
@@ -21,12 +20,12 @@ throw (new Error(["Invalid arity: ",cljs.core.str.cljs$core$IFn$_invoke$arity$1(
 });
 
 (onlypartners.components.mask.use_mask.cljs$core$IFn$_invoke$arity$2 = (function (valid_QMARK_,format){
-var value = reagent.core.atom.cljs$core$IFn$_invoke$arity$1("");
+var value = reagent.core.atom.call(null,"");
 return new cljs.core.PersistentVector(null, 2, 5, cljs.core.PersistentVector.EMPTY_NODE, [(function (){
-return cljs.core.deref(value);
-}),(function (p1__26672_SHARP_){
-if(cljs.core.truth_((valid_QMARK_.cljs$core$IFn$_invoke$arity$1 ? valid_QMARK_.cljs$core$IFn$_invoke$arity$1(p1__26672_SHARP_) : valid_QMARK_.call(null,p1__26672_SHARP_)))){
-return cljs.core.reset_BANG_(value,(format.cljs$core$IFn$_invoke$arity$1 ? format.cljs$core$IFn$_invoke$arity$1(p1__26672_SHARP_) : format.call(null,p1__26672_SHARP_)));
+return cljs.core.deref.call(null,value);
+}),(function (p1__22954_SHARP_){
+if(cljs.core.truth_(valid_QMARK_.call(null,p1__22954_SHARP_))){
+return cljs.core.reset_BANG_.call(null,value,format.call(null,p1__22954_SHARP_));
 } else {
 return null;
 }
@@ -34,8 +33,10 @@ return null;
 }));
 
 (onlypartners.components.mask.use_mask.cljs$core$IFn$_invoke$arity$1 = (function (valid_QMARK_){
-return onlypartners.components.mask.use_mask.cljs$core$IFn$_invoke$arity$2(valid_QMARK_,cljs.core.identity);
+return onlypartners.components.mask.use_mask.call(null,valid_QMARK_,cljs.core.identity);
 }));
 
 (onlypartners.components.mask.use_mask.cljs$lang$maxFixedArity = 2);
 
+
+//# sourceMappingURL=mask.js.map
