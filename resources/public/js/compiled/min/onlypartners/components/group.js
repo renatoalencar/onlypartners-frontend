@@ -1,11 +1,12 @@
-// Compiled by ClojureScript 1.10.773 {:static-fns true, :optimize-constants true, :target :nodejs}
+// Compiled by ClojureScript 1.10.773 {:target :nodejs}
 goog.provide('onlypartners.components.group');
 goog.require('cljs.core');
-goog.require('cljs.core.constants');
-onlypartners.components.group.group_profile = (function onlypartners$components$group$group_profile(p__30369){
-var map__30370 = p__30369;
-var map__30370__$1 = (((((!((map__30370 == null))))?(((((map__30370.cljs$lang$protocol_mask$partition0$ & (64))) || ((cljs.core.PROTOCOL_SENTINEL === map__30370.cljs$core$ISeq$))))?true:false):false))?cljs.core.apply.cljs$core$IFn$_invoke$arity$2(cljs.core.hash_map,map__30370):map__30370);
-var picture = cljs.core.get.cljs$core$IFn$_invoke$arity$2(map__30370__$1,cljs.core.cst$kw$picture);
-var name = cljs.core.get.cljs$core$IFn$_invoke$arity$2(map__30370__$1,cljs.core.cst$kw$name);
-return new cljs.core.PersistentVector(null, 3, 5, cljs.core.PersistentVector.EMPTY_NODE, [cljs.core.cst$kw$div$group_DASH_profile,new cljs.core.PersistentVector(null, 2, 5, cljs.core.PersistentVector.EMPTY_NODE, [cljs.core.cst$kw$img$group_DASH_profile__picture,new cljs.core.PersistentArrayMap(null, 1, [cljs.core.cst$kw$src,picture], null)], null),new cljs.core.PersistentVector(null, 2, 5, cljs.core.PersistentVector.EMPTY_NODE, [cljs.core.cst$kw$h1$group_DASH_profile__name,name], null)], null);
+onlypartners.components.group.group_profile = (function onlypartners$components$group$group_profile(p__29146){
+var map__29147 = p__29146;
+var map__29147__$1 = (((((!((map__29147 == null))))?(((((map__29147.cljs$lang$protocol_mask$partition0$ & (64))) || ((cljs.core.PROTOCOL_SENTINEL === map__29147.cljs$core$ISeq$))))?true:false):false))?cljs.core.apply.call(null,cljs.core.hash_map,map__29147):map__29147);
+var picture = cljs.core.get.call(null,map__29147__$1,new cljs.core.Keyword(null,"picture","picture",-921943404));
+var name = cljs.core.get.call(null,map__29147__$1,new cljs.core.Keyword(null,"name","name",1843675177));
+return new cljs.core.PersistentVector(null, 3, 5, cljs.core.PersistentVector.EMPTY_NODE, [new cljs.core.Keyword(null,"div.group-profile","div.group-profile",-656836155),new cljs.core.PersistentVector(null, 2, 5, cljs.core.PersistentVector.EMPTY_NODE, [new cljs.core.Keyword(null,"img.group-profile__picture","img.group-profile__picture",-1473765367),new cljs.core.PersistentArrayMap(null, 1, [new cljs.core.Keyword(null,"src","src",-1651076051),picture], null)], null),new cljs.core.PersistentVector(null, 2, 5, cljs.core.PersistentVector.EMPTY_NODE, [new cljs.core.Keyword(null,"h1.group-profile__name","h1.group-profile__name",1862278993),name], null)], null);
 });
+
+//# sourceMappingURL=group.js.map

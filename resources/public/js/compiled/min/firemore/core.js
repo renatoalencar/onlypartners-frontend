@@ -1,7 +1,6 @@
-// Compiled by ClojureScript 1.10.773 {:static-fns true, :optimize-constants true, :target :nodejs}
+// Compiled by ClojureScript 1.10.773 {:target :nodejs}
 goog.provide('firemore.core');
 goog.require('cljs.core');
-goog.require('cljs.core.constants');
 goog.require('cljs.core.async');
 goog.require('firemore.config');
 goog.require('firemore.authentication');
@@ -9,21 +8,21 @@ goog.require('firemore.finalizing_buffer');
 goog.require('firemore.firestore');
 goog.require('firemore.firebase');
 goog.require('firemore.hydrator');
-cljs.core.enable_console_print_BANG_();
+cljs.core.enable_console_print_BANG_.call(null);
 firemore.core.supported_types = new cljs.core.PersistentVector(null, 6, 5, cljs.core.PersistentVector.EMPTY_NODE, [cljs.core.string_QMARK_,cljs.core.int_QMARK_,cljs.core.float_QMARK_,cljs.core.boolean_QMARK_,cljs.core.nil_QMARK_,cljs.core.inst_QMARK_], null);
 firemore.core.throw_if_unsupported = (function firemore$core$throw_if_unsupported(m){
-var G__30300_30301 = m;
-var G__30300_30302__$1 = (((G__30300_30301 == null))?null:cljs.core.vals(G__30300_30301));
-var G__30300_30303__$2 = (((G__30300_30302__$1 == null))?null:cljs.core.remove.cljs$core$IFn$_invoke$arity$2((function (v){
-return cljs.core.some((function (p1__30299_SHARP_){
-return (p1__30299_SHARP_.cljs$core$IFn$_invoke$arity$1 ? p1__30299_SHARP_.cljs$core$IFn$_invoke$arity$1(v) : p1__30299_SHARP_.call(null,v));
+var G__29077_29078 = m;
+var G__29077_29079__$1 = (((G__29077_29078 == null))?null:cljs.core.vals.call(null,G__29077_29078));
+var G__29077_29080__$2 = (((G__29077_29079__$1 == null))?null:cljs.core.remove.call(null,(function (v){
+return cljs.core.some.call(null,(function (p1__29076_SHARP_){
+return p1__29076_SHARP_.call(null,v);
 }),firemore.core.supported_types);
-}),G__30300_30302__$1));
-var G__30300_30304__$3 = (((G__30300_30303__$2 == null))?null:cljs.core.first(G__30300_30303__$2));
-var G__30300_30305__$4 = (((G__30300_30304__$3 == null))?null:cljs.core.ex_info.cljs$core$IFn$_invoke$arity$2("Unsupported Data",G__30300_30304__$3));
-if((G__30300_30305__$4 == null)){
+}),G__29077_29079__$1));
+var G__29077_29081__$3 = (((G__29077_29080__$2 == null))?null:cljs.core.first.call(null,G__29077_29080__$2));
+var G__29077_29082__$4 = (((G__29077_29081__$3 == null))?null:cljs.core.ex_info.call(null,"Unsupported Data",G__29077_29081__$3));
+if((G__29077_29082__$4 == null)){
 } else {
-throw G__30300_30305__$4;
+throw G__29077_29082__$4;
 }
 
 return m;
@@ -32,13 +31,13 @@ return m;
  * Returns the clojure form of the `js-object` document from Firestore.
  */
 firemore.core.fire__GT_clj = (function firemore$core$fire__GT_clj(js_object){
-return firemore.core.throw_if_unsupported(firemore.firestore.clojurify(js_object));
+return firemore.core.throw_if_unsupported.call(null,firemore.firestore.clojurify.call(null,js_object));
 });
 /**
  * Returns a javascript object from the firemore `document` (a clojure map).
  */
 firemore.core.clj__GT_fire = (function firemore$core$clj__GT_fire(document){
-return firemore.firestore.jsonify(firemore.core.throw_if_unsupported(document));
+return firemore.firestore.jsonify.call(null,firemore.core.throw_if_unsupported.call(null,document));
 });
 /**
  * Get the document at `reference` in the Firestore database.
@@ -53,14 +52,14 @@ return firemore.firestore.jsonify(firemore.core.throw_if_unsupported(document));
  */
 firemore.core.get = (function firemore$core$get(var_args){
 var args__4742__auto__ = [];
-var len__4736__auto___30312 = arguments.length;
-var i__4737__auto___30313 = (0);
+var len__4736__auto___29089 = arguments.length;
+var i__4737__auto___29090 = (0);
 while(true){
-if((i__4737__auto___30313 < len__4736__auto___30312)){
-args__4742__auto__.push((arguments[i__4737__auto___30313]));
+if((i__4737__auto___29090 < len__4736__auto___29089)){
+args__4742__auto__.push((arguments[i__4737__auto___29090]));
 
-var G__30314 = (i__4737__auto___30313 + (1));
-i__4737__auto___30313 = G__30314;
+var G__29091 = (i__4737__auto___29090 + (1));
+i__4737__auto___29090 = G__29091;
 continue;
 } else {
 }
@@ -71,20 +70,20 @@ var argseq__4743__auto__ = ((((1) < args__4742__auto__.length))?(new cljs.core.I
 return firemore.core.get.cljs$core$IFn$_invoke$arity$variadic((arguments[(0)]),argseq__4743__auto__);
 });
 
-(firemore.core.get.cljs$core$IFn$_invoke$arity$variadic = (function (reference,p__30308){
-var vec__30309 = p__30308;
-var options = cljs.core.nth.cljs$core$IFn$_invoke$arity$3(vec__30309,(0),null);
-return firemore.firestore.get_db.cljs$core$IFn$_invoke$arity$2(reference,options);
+(firemore.core.get.cljs$core$IFn$_invoke$arity$variadic = (function (reference,p__29085){
+var vec__29086 = p__29085;
+var options = cljs.core.nth.call(null,vec__29086,(0),null);
+return firemore.firestore.get_db.call(null,reference,options);
 }));
 
 (firemore.core.get.cljs$lang$maxFixedArity = (1));
 
 /** @this {Function} */
-(firemore.core.get.cljs$lang$applyTo = (function (seq30306){
-var G__30307 = cljs.core.first(seq30306);
-var seq30306__$1 = cljs.core.next(seq30306);
+(firemore.core.get.cljs$lang$applyTo = (function (seq29083){
+var G__29084 = cljs.core.first.call(null,seq29083);
+var seq29083__$1 = cljs.core.next.call(null,seq29083);
 var self__4723__auto__ = this;
-return self__4723__auto__.cljs$core$IFn$_invoke$arity$variadic(G__30307,seq30306__$1);
+return self__4723__auto__.cljs$core$IFn$_invoke$arity$variadic(G__29084,seq29083__$1);
 }));
 
 /**
@@ -104,14 +103,14 @@ return self__4723__auto__.cljs$core$IFn$_invoke$arity$variadic(G__30307,seq30306
  */
 firemore.core.watch = (function firemore$core$watch(var_args){
 var args__4742__auto__ = [];
-var len__4736__auto___30323 = arguments.length;
-var i__4737__auto___30324 = (0);
+var len__4736__auto___29100 = arguments.length;
+var i__4737__auto___29101 = (0);
 while(true){
-if((i__4737__auto___30324 < len__4736__auto___30323)){
-args__4742__auto__.push((arguments[i__4737__auto___30324]));
+if((i__4737__auto___29101 < len__4736__auto___29100)){
+args__4742__auto__.push((arguments[i__4737__auto___29101]));
 
-var G__30325 = (i__4737__auto___30324 + (1));
-i__4737__auto___30324 = G__30325;
+var G__29102 = (i__4737__auto___29101 + (1));
+i__4737__auto___29101 = G__29102;
 continue;
 } else {
 }
@@ -122,19 +121,19 @@ var argseq__4743__auto__ = ((((1) < args__4742__auto__.length))?(new cljs.core.I
 return firemore.core.watch.cljs$core$IFn$_invoke$arity$variadic((arguments[(0)]),argseq__4743__auto__);
 });
 
-(firemore.core.watch.cljs$core$IFn$_invoke$arity$variadic = (function (reference,p__30317){
-var vec__30318 = p__30317;
-var options = cljs.core.nth.cljs$core$IFn$_invoke$arity$3(vec__30318,(0),null);
-var map__30321 = firemore.firestore.listen.cljs$core$IFn$_invoke$arity$2(reference,options);
-var map__30321__$1 = (((((!((map__30321 == null))))?(((((map__30321.cljs$lang$protocol_mask$partition0$ & (64))) || ((cljs.core.PROTOCOL_SENTINEL === map__30321.cljs$core$ISeq$))))?true:false):false))?cljs.core.apply.cljs$core$IFn$_invoke$arity$2(cljs.core.hash_map,map__30321):map__30321);
-var c = cljs.core.get.cljs$core$IFn$_invoke$arity$2(map__30321__$1,cljs.core.cst$kw$c);
-var unsubscribe = cljs.core.get.cljs$core$IFn$_invoke$arity$2(map__30321__$1,cljs.core.cst$kw$unsubscribe);
-var opts = new cljs.core.PersistentArrayMap(null, 1, [cljs.core.cst$kw$on_DASH_close,(function (){
-return (unsubscribe.cljs$core$IFn$_invoke$arity$0 ? unsubscribe.cljs$core$IFn$_invoke$arity$0() : unsubscribe.call(null));
+(firemore.core.watch.cljs$core$IFn$_invoke$arity$variadic = (function (reference,p__29094){
+var vec__29095 = p__29094;
+var options = cljs.core.nth.call(null,vec__29095,(0),null);
+var map__29098 = firemore.firestore.listen.call(null,reference,options);
+var map__29098__$1 = (((((!((map__29098 == null))))?(((((map__29098.cljs$lang$protocol_mask$partition0$ & (64))) || ((cljs.core.PROTOCOL_SENTINEL === map__29098.cljs$core$ISeq$))))?true:false):false))?cljs.core.apply.call(null,cljs.core.hash_map,map__29098):map__29098);
+var c = cljs.core.get.call(null,map__29098__$1,new cljs.core.Keyword(null,"c","c",-1763192079));
+var unsubscribe = cljs.core.get.call(null,map__29098__$1,new cljs.core.Keyword(null,"unsubscribe","unsubscribe",632650147));
+var opts = new cljs.core.PersistentArrayMap(null, 1, [new cljs.core.Keyword(null,"on-close","on-close",-761178394),(function (){
+return unsubscribe.call(null);
 })], null);
-var buffer = firemore.finalizing_buffer.create.cljs$core$IFn$_invoke$arity$2((1),opts);
-var finalizing_chan = cljs.core.async.chan.cljs$core$IFn$_invoke$arity$1(buffer);
-cljs.core.async.tap.cljs$core$IFn$_invoke$arity$2(cljs.core.async.mult(c),finalizing_chan);
+var buffer = firemore.finalizing_buffer.create.call(null,(1),opts);
+var finalizing_chan = cljs.core.async.chan.call(null,buffer);
+cljs.core.async.tap.call(null,cljs.core.async.mult.call(null,c),finalizing_chan);
 
 return finalizing_chan;
 }));
@@ -142,11 +141,11 @@ return finalizing_chan;
 (firemore.core.watch.cljs$lang$maxFixedArity = (1));
 
 /** @this {Function} */
-(firemore.core.watch.cljs$lang$applyTo = (function (seq30315){
-var G__30316 = cljs.core.first(seq30315);
-var seq30315__$1 = cljs.core.next(seq30315);
+(firemore.core.watch.cljs$lang$applyTo = (function (seq29092){
+var G__29093 = cljs.core.first.call(null,seq29092);
+var seq29092__$1 = cljs.core.next.call(null,seq29092);
 var self__4723__auto__ = this;
-return self__4723__auto__.cljs$core$IFn$_invoke$arity$variadic(G__30316,seq30315__$1);
+return self__4723__auto__.cljs$core$IFn$_invoke$arity$variadic(G__29093,seq29092__$1);
 }));
 
 /**
@@ -158,14 +157,14 @@ return self__4723__auto__.cljs$core$IFn$_invoke$arity$variadic(G__30316,seq30315
  */
 firemore.core.push_BANG_ = (function firemore$core$push_BANG_(var_args){
 var args__4742__auto__ = [];
-var len__4736__auto___30333 = arguments.length;
-var i__4737__auto___30334 = (0);
+var len__4736__auto___29110 = arguments.length;
+var i__4737__auto___29111 = (0);
 while(true){
-if((i__4737__auto___30334 < len__4736__auto___30333)){
-args__4742__auto__.push((arguments[i__4737__auto___30334]));
+if((i__4737__auto___29111 < len__4736__auto___29110)){
+args__4742__auto__.push((arguments[i__4737__auto___29111]));
 
-var G__30335 = (i__4737__auto___30334 + (1));
-i__4737__auto___30334 = G__30335;
+var G__29112 = (i__4737__auto___29111 + (1));
+i__4737__auto___29111 = G__29112;
 continue;
 } else {
 }
@@ -176,22 +175,22 @@ var argseq__4743__auto__ = ((((2) < args__4742__auto__.length))?(new cljs.core.I
 return firemore.core.push_BANG_.cljs$core$IFn$_invoke$arity$variadic((arguments[(0)]),(arguments[(1)]),argseq__4743__auto__);
 });
 
-(firemore.core.push_BANG_.cljs$core$IFn$_invoke$arity$variadic = (function (reference,document,p__30329){
-var vec__30330 = p__30329;
-var options = cljs.core.nth.cljs$core$IFn$_invoke$arity$3(vec__30330,(0),null);
-return firemore.firestore.add_db_BANG_.cljs$core$IFn$_invoke$arity$3(reference,document,options);
+(firemore.core.push_BANG_.cljs$core$IFn$_invoke$arity$variadic = (function (reference,document,p__29106){
+var vec__29107 = p__29106;
+var options = cljs.core.nth.call(null,vec__29107,(0),null);
+return firemore.firestore.add_db_BANG_.call(null,reference,document,options);
 }));
 
 (firemore.core.push_BANG_.cljs$lang$maxFixedArity = (2));
 
 /** @this {Function} */
-(firemore.core.push_BANG_.cljs$lang$applyTo = (function (seq30326){
-var G__30327 = cljs.core.first(seq30326);
-var seq30326__$1 = cljs.core.next(seq30326);
-var G__30328 = cljs.core.first(seq30326__$1);
-var seq30326__$2 = cljs.core.next(seq30326__$1);
+(firemore.core.push_BANG_.cljs$lang$applyTo = (function (seq29103){
+var G__29104 = cljs.core.first.call(null,seq29103);
+var seq29103__$1 = cljs.core.next.call(null,seq29103);
+var G__29105 = cljs.core.first.call(null,seq29103__$1);
+var seq29103__$2 = cljs.core.next.call(null,seq29103__$1);
 var self__4723__auto__ = this;
-return self__4723__auto__.cljs$core$IFn$_invoke$arity$variadic(G__30327,G__30328,seq30326__$2);
+return self__4723__auto__.cljs$core$IFn$_invoke$arity$variadic(G__29104,G__29105,seq29103__$2);
 }));
 
 /**
@@ -208,14 +207,14 @@ return self__4723__auto__.cljs$core$IFn$_invoke$arity$variadic(G__30327,G__30328
  */
 firemore.core.write_BANG_ = (function firemore$core$write_BANG_(var_args){
 var args__4742__auto__ = [];
-var len__4736__auto___30343 = arguments.length;
-var i__4737__auto___30344 = (0);
+var len__4736__auto___29120 = arguments.length;
+var i__4737__auto___29121 = (0);
 while(true){
-if((i__4737__auto___30344 < len__4736__auto___30343)){
-args__4742__auto__.push((arguments[i__4737__auto___30344]));
+if((i__4737__auto___29121 < len__4736__auto___29120)){
+args__4742__auto__.push((arguments[i__4737__auto___29121]));
 
-var G__30345 = (i__4737__auto___30344 + (1));
-i__4737__auto___30344 = G__30345;
+var G__29122 = (i__4737__auto___29121 + (1));
+i__4737__auto___29121 = G__29122;
 continue;
 } else {
 }
@@ -226,22 +225,22 @@ var argseq__4743__auto__ = ((((2) < args__4742__auto__.length))?(new cljs.core.I
 return firemore.core.write_BANG_.cljs$core$IFn$_invoke$arity$variadic((arguments[(0)]),(arguments[(1)]),argseq__4743__auto__);
 });
 
-(firemore.core.write_BANG_.cljs$core$IFn$_invoke$arity$variadic = (function (reference,document,p__30339){
-var vec__30340 = p__30339;
-var options = cljs.core.nth.cljs$core$IFn$_invoke$arity$3(vec__30340,(0),null);
-return firemore.firestore.set_db_BANG_.cljs$core$IFn$_invoke$arity$3(reference,document,options);
+(firemore.core.write_BANG_.cljs$core$IFn$_invoke$arity$variadic = (function (reference,document,p__29116){
+var vec__29117 = p__29116;
+var options = cljs.core.nth.call(null,vec__29117,(0),null);
+return firemore.firestore.set_db_BANG_.call(null,reference,document,options);
 }));
 
 (firemore.core.write_BANG_.cljs$lang$maxFixedArity = (2));
 
 /** @this {Function} */
-(firemore.core.write_BANG_.cljs$lang$applyTo = (function (seq30336){
-var G__30337 = cljs.core.first(seq30336);
-var seq30336__$1 = cljs.core.next(seq30336);
-var G__30338 = cljs.core.first(seq30336__$1);
-var seq30336__$2 = cljs.core.next(seq30336__$1);
+(firemore.core.write_BANG_.cljs$lang$applyTo = (function (seq29113){
+var G__29114 = cljs.core.first.call(null,seq29113);
+var seq29113__$1 = cljs.core.next.call(null,seq29113);
+var G__29115 = cljs.core.first.call(null,seq29113__$1);
+var seq29113__$2 = cljs.core.next.call(null,seq29113__$1);
 var self__4723__auto__ = this;
-return self__4723__auto__.cljs$core$IFn$_invoke$arity$variadic(G__30337,G__30338,seq30336__$2);
+return self__4723__auto__.cljs$core$IFn$_invoke$arity$variadic(G__29114,G__29115,seq29113__$2);
 }));
 
 /**
@@ -258,14 +257,14 @@ return self__4723__auto__.cljs$core$IFn$_invoke$arity$variadic(G__30337,G__30338
  */
 firemore.core.merge_BANG_ = (function firemore$core$merge_BANG_(var_args){
 var args__4742__auto__ = [];
-var len__4736__auto___30353 = arguments.length;
-var i__4737__auto___30354 = (0);
+var len__4736__auto___29130 = arguments.length;
+var i__4737__auto___29131 = (0);
 while(true){
-if((i__4737__auto___30354 < len__4736__auto___30353)){
-args__4742__auto__.push((arguments[i__4737__auto___30354]));
+if((i__4737__auto___29131 < len__4736__auto___29130)){
+args__4742__auto__.push((arguments[i__4737__auto___29131]));
 
-var G__30355 = (i__4737__auto___30354 + (1));
-i__4737__auto___30354 = G__30355;
+var G__29132 = (i__4737__auto___29131 + (1));
+i__4737__auto___29131 = G__29132;
 continue;
 } else {
 }
@@ -276,22 +275,22 @@ var argseq__4743__auto__ = ((((2) < args__4742__auto__.length))?(new cljs.core.I
 return firemore.core.merge_BANG_.cljs$core$IFn$_invoke$arity$variadic((arguments[(0)]),(arguments[(1)]),argseq__4743__auto__);
 });
 
-(firemore.core.merge_BANG_.cljs$core$IFn$_invoke$arity$variadic = (function (reference,document,p__30349){
-var vec__30350 = p__30349;
-var options = cljs.core.nth.cljs$core$IFn$_invoke$arity$3(vec__30350,(0),null);
-return firemore.firestore.update_db_BANG_.cljs$core$IFn$_invoke$arity$3(reference,document,options);
+(firemore.core.merge_BANG_.cljs$core$IFn$_invoke$arity$variadic = (function (reference,document,p__29126){
+var vec__29127 = p__29126;
+var options = cljs.core.nth.call(null,vec__29127,(0),null);
+return firemore.firestore.update_db_BANG_.call(null,reference,document,options);
 }));
 
 (firemore.core.merge_BANG_.cljs$lang$maxFixedArity = (2));
 
 /** @this {Function} */
-(firemore.core.merge_BANG_.cljs$lang$applyTo = (function (seq30346){
-var G__30347 = cljs.core.first(seq30346);
-var seq30346__$1 = cljs.core.next(seq30346);
-var G__30348 = cljs.core.first(seq30346__$1);
-var seq30346__$2 = cljs.core.next(seq30346__$1);
+(firemore.core.merge_BANG_.cljs$lang$applyTo = (function (seq29123){
+var G__29124 = cljs.core.first.call(null,seq29123);
+var seq29123__$1 = cljs.core.next.call(null,seq29123);
+var G__29125 = cljs.core.first.call(null,seq29123__$1);
+var seq29123__$2 = cljs.core.next.call(null,seq29123__$1);
 var self__4723__auto__ = this;
-return self__4723__auto__.cljs$core$IFn$_invoke$arity$variadic(G__30347,G__30348,seq30346__$2);
+return self__4723__auto__.cljs$core$IFn$_invoke$arity$variadic(G__29124,G__29125,seq29123__$2);
 }));
 
 /**
@@ -307,14 +306,14 @@ return self__4723__auto__.cljs$core$IFn$_invoke$arity$variadic(G__30347,G__30348
  */
 firemore.core.delete_BANG_ = (function firemore$core$delete_BANG_(var_args){
 var args__4742__auto__ = [];
-var len__4736__auto___30362 = arguments.length;
-var i__4737__auto___30363 = (0);
+var len__4736__auto___29139 = arguments.length;
+var i__4737__auto___29140 = (0);
 while(true){
-if((i__4737__auto___30363 < len__4736__auto___30362)){
-args__4742__auto__.push((arguments[i__4737__auto___30363]));
+if((i__4737__auto___29140 < len__4736__auto___29139)){
+args__4742__auto__.push((arguments[i__4737__auto___29140]));
 
-var G__30364 = (i__4737__auto___30363 + (1));
-i__4737__auto___30363 = G__30364;
+var G__29141 = (i__4737__auto___29140 + (1));
+i__4737__auto___29140 = G__29141;
 continue;
 } else {
 }
@@ -325,24 +324,24 @@ var argseq__4743__auto__ = ((((1) < args__4742__auto__.length))?(new cljs.core.I
 return firemore.core.delete_BANG_.cljs$core$IFn$_invoke$arity$variadic((arguments[(0)]),argseq__4743__auto__);
 });
 
-(firemore.core.delete_BANG_.cljs$core$IFn$_invoke$arity$variadic = (function (reference,p__30358){
-var vec__30359 = p__30358;
-var options = cljs.core.nth.cljs$core$IFn$_invoke$arity$3(vec__30359,(0),null);
-return firemore.firestore.delete_db_BANG_.cljs$core$IFn$_invoke$arity$2(reference,options);
+(firemore.core.delete_BANG_.cljs$core$IFn$_invoke$arity$variadic = (function (reference,p__29135){
+var vec__29136 = p__29135;
+var options = cljs.core.nth.call(null,vec__29136,(0),null);
+return firemore.firestore.delete_db_BANG_.call(null,reference,options);
 }));
 
 (firemore.core.delete_BANG_.cljs$lang$maxFixedArity = (1));
 
 /** @this {Function} */
-(firemore.core.delete_BANG_.cljs$lang$applyTo = (function (seq30356){
-var G__30357 = cljs.core.first(seq30356);
-var seq30356__$1 = cljs.core.next(seq30356);
+(firemore.core.delete_BANG_.cljs$lang$applyTo = (function (seq29133){
+var G__29134 = cljs.core.first.call(null,seq29133);
+var seq29133__$1 = cljs.core.next.call(null,seq29133);
 var self__4723__auto__ = this;
-return self__4723__auto__.cljs$core$IFn$_invoke$arity$variadic(G__30357,seq30356__$1);
+return self__4723__auto__.cljs$core$IFn$_invoke$arity$variadic(G__29134,seq29133__$1);
 }));
 
 firemore.core.transact_BANG_ = (function firemore$core$transact_BANG_(update_fx){
-return firemore.firestore.transact_db_BANG_.cljs$core$IFn$_invoke$arity$1(update_fx);
+return firemore.firestore.transact_db_BANG_.call(null,update_fx);
 });
 firemore.core.create_batch = firemore.firestore.create_batch;
 firemore.core.commit_batch_BANG_ = firemore.firestore.commit_batch_BANG_;
@@ -370,11 +369,11 @@ return firemore.authentication.user_atom;
  * Returns the last value returned from user-chan.
  */
 firemore.core.user = (function firemore$core$user(){
-return cljs.core.deref(firemore.core.user_atom());
+return cljs.core.deref.call(null,firemore.core.user_atom.call(null));
 });
 firemore.core.login_anonymously_BANG_ = (function firemore$core$login_anonymously_BANG_(){
 
-return firemore.authentication.login_anonymously_BANG_.cljs$core$IFn$_invoke$arity$0();
+return firemore.authentication.login_anonymously_BANG_.call(null);
 });
 /**
  * Returns a channel that will have a uid put! upon it'
@@ -388,11 +387,11 @@ return firemore.authentication.login_anonymously_BANG_.cljs$core$IFn$_invoke$ari
  *   put!    -> `clojure.core.async/put!`
  */
 firemore.core.uid = (function firemore$core$uid(){
-return firemore.authentication.uid();
+return firemore.authentication.uid.call(null);
 });
 firemore.core.logout_BANG_ = (function firemore$core$logout_BANG_(){
 
-return firemore.authentication.logout_BANG_.cljs$core$IFn$_invoke$arity$0();
+return firemore.authentication.logout_BANG_.call(null);
 });
 /**
  * Deletes the currently logged in user from Firestore.
@@ -415,13 +414,13 @@ return null;
  *   {path reference-value} will show up under the :firemore key in `atm`.
  */
 firemore.core.watch_BANG_ = (function firemore$core$watch_BANG_(atm,reference,path){
-return firemore.hydrator.watch_BANG_.cljs$core$IFn$_invoke$arity$3(atm,path,reference);
+return firemore.hydrator.watch_BANG_.call(null,atm,path,reference);
 });
 /**
  * Remove the `path` from the `atm`
  */
 firemore.core.unwatch_BANG_ = (function firemore$core$unwatch_BANG_(atm,path){
-return firemore.hydrator.unwatch_BANG_(atm,path);
+return firemore.hydrator.unwatch_BANG_.call(null,atm,path);
 });
 /**
  * Add functionality to atom `atm` so that `:user` reflects latest value from `get-user`
@@ -436,3 +435,5 @@ firemore.core.unwatch_user = (function firemore$core$unwatch_user(atm){
 return null;
 });
 firemore.core.initialize = firemore.firebase.initialize;
+
+//# sourceMappingURL=core.js.map
