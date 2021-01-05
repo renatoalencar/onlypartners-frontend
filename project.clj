@@ -38,8 +38,8 @@
                                :asset-path           "js/compiled/out"
                                :output-to            "resources/public/js/compiled/out/index.js"
                                :output-dir           "resources/public/js/compiled/out"
-                               :bundle-cmd           {:none    ["npx.cmd" "webpack" "--mode=development"]
-                                                      :default ["npx.cmd" "webpack"]}
+                               :bundle-cmd           {:none    ["npx" "webpack" "--mode=development"]
+                                                      :default ["npx" "webpack"]}
                                :source-map-timestamp true
                                ;; To console.log CLJS data-structures make sure you enable devtools in Chrome
                                ;; https://github.com/binaryage/cljs-devtools
@@ -49,13 +49,13 @@
                ;; lein cljsbuild once min
                {:id           "min"
                 :source-paths ["src"]
-                :compiler     {:main            onlypartners.core
-                               :target          :bundle
-                               :asset-path      "js/compiled/min"
-                               :output-to       "resources/public/js/compiled/min/index.js"
-                               :output-dir      "resources/public/js/compiled/min"
-                               :bundle-cmd      {:none    ["npx.cmd" "webpack" "--mode=production"]
-                                                 :default ["npx.cmd" "webpack" "--mode=production"]}}}]}
+                :compiler     {:main       onlypartners.core
+                               :target     :bundle
+                               :asset-path "js/compiled/min"
+                               :output-to  "resources/public/js/compiled/min/index.js"
+                               :output-dir "resources/public/js/compiled/min"
+                               :bundle-cmd {:none    ["npx" "webpack" "--mode=production"]
+                                            :default ["npx" "webpack" "--mode=production"]}}}]}
 
   :figwheel {;; :http-server-root "public" ;; default and assumes "resources"
              ;; :server-port 3449 ;; default
