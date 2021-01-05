@@ -41,12 +41,14 @@
 (defn cpf-field []
   (let [[cpf set-cpf!] (mask/use-mask valid-cpf-format? format-cpf)
         [error validate!] (validation/use-validation "CPF é obrigatório" empty?
-                                                     "CPF não é válido"  (comp not valid-cpf?))]
+                                                     "CPF não é válido" (comp not valid-cpf?))]
     (fn []
       [:<>
        [:label.label {:for :identification} "CPF"]
+
        (when (error)
          [:span.field__error (error)])
+
        [:input#identification.field {:class         (util/classes :field--invalid
                                                                   #(some? (error)))
                                      :type          :text
@@ -59,3 +61,21 @@
        [:input {:type          :hidden
                 :data-checkout :docType
                 :value         :CPF}]])))
+
+(defn email-field []
+  (let [email (r/atom "")
+        [error validate!] (validation/use-validation "E-mail é obrigatório" empty?)]
+    (fn []
+      [:<>
+       [:label.label {:for :email} "E-mail"]
+
+       (when (error)
+         [:span.field__error (error)])
+
+       [:input#email.field {:class       (util/classes :field--invalid #(some? (error)))
+                            :type        :email
+                            :name        :email
+                            :value       @email
+                            :on-change   #(reset! email (-> % .-target .-value))
+                            :on-blur     #(validate! @email)
+                            :placeholder "fulano@exemplo.com.br"}]])))
