@@ -49,14 +49,13 @@
                ;; lein cljsbuild once min
                {:id           "min"
                 :source-paths ["src"]
-                :compiler     {:main          onlypartners.core
-                               :target        :bundle
-                               :asset-path    "js/compiled/out"
-                               :output-to     "resources/public/js/compiled/out/index.js"
-                               :output-dir    "resources/public/js/compiled/min"
-                               :bundle-cmd    {:none    ["npx.cmd" "webpack" "--mode=production"]
-                                               :default ["npx.cmd" "webpack"]}
-                               :optimizations :advanced}}]}
+                :compiler     {:main            onlypartners.core
+                               :target          :bundle
+                               :asset-path      "js/compiled/min"
+                               :output-to       "resources/public/js/compiled/min/index.js"
+                               :output-dir      "resources/public/js/compiled/min"
+                               :bundle-cmd      {:none    ["npx.cmd" "webpack" "--mode=production"]
+                                                 :default ["npx.cmd" "webpack" "--mode=production"]}}}]}
 
   :figwheel {;; :http-server-root "public" ;; default and assumes "resources"
              ;; :server-port 3449 ;; default
