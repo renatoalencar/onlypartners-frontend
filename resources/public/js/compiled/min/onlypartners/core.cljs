@@ -75,11 +75,11 @@
           user (js->clj user-object)]
       (prn user (js/JSON.stringify user-object))
       (async/<!
-        (firemore/write! [:subscriptions (:id user)]
+        (firemore/write! [:subscriptions (get user "id")]
                          {:payment           payment
                           :status            :pending
                           :telegram-user     user
-                          :telegram-user-id  (:id user)
+                          :telegram-user-id  (get user "id")
                           :telegram-group-id (:telegram group)})))))
 
 (defn append-telegram-widget [target]
