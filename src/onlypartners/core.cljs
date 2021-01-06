@@ -75,7 +75,7 @@
           user (js->clj user-object)]
       (prn user (js/JSON.stringify user-object))
       (async/<!
-        (firemore/write! [:subscriptions (get user "id")]
+        (firemore/write! [:subscriptions (str (get user "id"))]
                          {:payment           payment
                           :status            :pending
                           :telegram-user     user
