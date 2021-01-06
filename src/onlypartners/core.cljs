@@ -15,10 +15,12 @@
 
 (enable-console-print!)
 
-(defn plan-card [{:keys [id title description price]}]
+(defn plan-card [{:keys [id title description price] :as plan}]
   [:li.card.plan-card {:key      id
                        :class    (util/classes :plan-card--selected #(db/selected? id))
-                       :on-click #(db/select-plan id)}
+                       :on-click #(do
+                                    (analytics/track :click-plan :plan plan)
+                                    (db/select-plan id))}
    [:b.plan-card__price (util/format-currency price)]
    [:h3.plan-card__title title]
    [:p.plan-card__description description]])
@@ -30,13 +32,18 @@
     [:ul.plan-list (doall (map plan-card plans))]]
    [:button.button.plan-selection__subscribe-button
     {:disabled (nil? (:selected-plan @db/db))
-     :on-click #(router/go :step :payment)} "Assinar"]])
+     :on-click #(do
+                  (analytics/track :select-plan :plan (db/selected-plan))
+                  (router/go :step :payment))}
+    "Assinar"]])
 
 (payment/set-public-key "TEST-21ee96e7-5cab-40a3-959c-7da1a0adbd2a")
 
 (defn submit [event]
   (.preventDefault event)
   (.persist event)
+
+  (analytics/track :pay :plan (db/selected-plan))
 
   (async/go
     (let [[success? response] (async/<! (payment/create-token (.-target event)))]
@@ -50,6 +57,7 @@
   [:main.payment-information
    [order/order-description group #(do
                                      (.preventDefault %)
+                                     (analytics/track :change-plan :plan (db/selected-plan))
                                      (router/go :step :plans))]
 
    [:form.card.payment-information__form {:on-submit submit}
@@ -70,6 +78,7 @@
     [:button.button {:type :submit} "Pagar"]]])
 
 (defn create-subscription [user-object]
+  (analytics/track :subscribe :plan (db/selected-plan))
   (go
     (let [{:keys [payment group]} @db/db
           user (js->clj user-object)]
