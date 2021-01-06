@@ -87,3 +87,4 @@ goog.addDependency("../onlypartners/components/group.js", ['onlypartners.compone
 goog.addDependency("../onlypartners/components/order.js", ['onlypartners.components.order'], ['onlypartners.util', 'onlypartners.db', 'cljs.core', 'onlypartners.components.group']);
 goog.addDependency("../onlypartners/payment.js", ['onlypartners.payment'], ['cljs.core', 'cljs.core.async']);
 goog.addDependency("../onlypartners/core.js", ['onlypartners.core'], ['onlypartners.util', 'onlypartners.components.credit_card', 'onlypartners.db', 'onlypartners.components.identification', 'firemore.core', 'reagent.core', 'cljs.core', 'onlypartners.router', 'cljs.core.async', 'onlypartners.components.group', 'onlypartners.components.order', 'onlypartners.payment', 'reagent.dom']);
+goog.addDependency("../onlypartners/analytics.js", ['onlypartners.analytics'], ['cljs.core']);

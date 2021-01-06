@@ -54,3 +54,4 @@ React.Component.prototype.props.argv;
 React.Component.prototype.props.children;
 var Java;
 Java.type;
+var plausible;
