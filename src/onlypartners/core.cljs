@@ -73,6 +73,7 @@
   (go
     (let [{:keys [payment group]} @db/db
           user (js->clj user-object)]
+      (prn user (js/JSON.stringify user-object))
       (async/<!
         (firemore/write! [:subscriptions (:id user)]
                          {:payment           payment
