@@ -83,8 +83,8 @@ goog.addDependency("../firemore/hydrator.js", ['firemore.hydrator'], ['cljs.core
 goog.addDependency("../firemore/authentication.js", ['firemore.authentication'], ['cljs.core', 'firemore.config', 'cljs.core.async', 'firemore.firebase']);
 goog.addDependency("../firemore/core.js", ['firemore.core'], ['firemore.finalizing_buffer', 'cljs.core', 'firemore.config', 'cljs.core.async', 'firemore.firebase', 'firemore.hydrator', 'firemore.firestore', 'firemore.authentication']);
 goog.addDependency("../onlypartners/router.js", ['onlypartners.router'], ['reagent.core', 'cljs.core']);
+goog.addDependency("../onlypartners/analytics.js", ['onlypartners.analytics'], ['cljs.core']);
 goog.addDependency("../onlypartners/components/group.js", ['onlypartners.components.group'], ['cljs.core']);
 goog.addDependency("../onlypartners/components/order.js", ['onlypartners.components.order'], ['onlypartners.util', 'onlypartners.db', 'cljs.core', 'onlypartners.components.group']);
 goog.addDependency("../onlypartners/payment.js", ['onlypartners.payment'], ['cljs.core', 'cljs.core.async']);
-goog.addDependency("../onlypartners/core.js", ['onlypartners.core'], ['onlypartners.util', 'onlypartners.components.credit_card', 'onlypartners.db', 'onlypartners.components.identification', 'firemore.core', 'reagent.core', 'cljs.core', 'onlypartners.router', 'cljs.core.async', 'onlypartners.components.group', 'onlypartners.components.order', 'onlypartners.payment', 'reagent.dom']);
-goog.addDependency("../onlypartners/analytics.js", ['onlypartners.analytics'], ['cljs.core']);
+goog.addDependency("../onlypartners/core.js", ['onlypartners.core'], ['onlypartners.util', 'onlypartners.components.credit_card', 'onlypartners.db', 'onlypartners.components.identification', 'firemore.core', 'reagent.core', 'cljs.core', 'onlypartners.router', 'cljs.core.async', 'onlypartners.analytics', 'onlypartners.components.group', 'onlypartners.components.order', 'onlypartners.payment', 'reagent.dom']);
