@@ -69,13 +69,14 @@
 
     [:button.button {:type :submit} "Pagar"]]])
 
-(defn create-subscription [user]
+(defn create-subscription [user-object]
   (go
-    (let [{:keys [payment group]} @db/db]
+    (let [{:keys [payment group]} @db/db
+          user (js->clj user-object)]
       (async/<!
         (firemore/write! [:subscriptions (:id user)]
                          {:payment           payment
-                          :status :pending
+                          :status            :pending
                           :telegram-user     user
                           :telegram-user-id  (:id user)
                           :telegram-group-id (:telegram group)})))))
@@ -101,8 +102,8 @@
 
 (defn telegram-login-dev []
   [:button {:on-click #(let [username (js/prompt "Telegram username")]
-                         (create-subscription {:id username}))}
-           "Finalizar"])
+                         (create-subscription (js-obj :id username)))}
+   "Finalizar"])
 
 (defn payment-confirmation [{:keys [group]}]
   [:main.payment-confirmation
@@ -126,11 +127,11 @@
   (firemore.firebase/initialize {:api-key    "AIzaSyDdGlT3chqZXptsT82H6jSvLKhvs0FqiME"
                                  :project-id "only-partners"})
 
-  (let [group-id "fnNebpIsLJkXBQJhoUBo"
+  (let [[_ group-id] (re-matches #"/subscribe/(?<groupid>[a-zA-Z]+)" js/location.pathname)
         group (async/<! (firemore/get [:groups group-id]))
         plans (async/<! (firemore/get [:groups group-id :plans]))]
     (swap! db/db assoc :group group
-                       :plans (map #(assoc % :id (-> % meta :id)) plans)))
+           :plans (map #(assoc % :id (-> % meta :id)) plans)))
 
   (dom/render [app-wrapper]
               (. js/document (getElementById "app"))))

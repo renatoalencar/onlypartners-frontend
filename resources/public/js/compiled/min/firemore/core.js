@@ -11,18 +11,18 @@ goog.require('firemore.hydrator');
 cljs.core.enable_console_print_BANG_.call(null);
 firemore.core.supported_types = new cljs.core.PersistentVector(null, 6, 5, cljs.core.PersistentVector.EMPTY_NODE, [cljs.core.string_QMARK_,cljs.core.int_QMARK_,cljs.core.float_QMARK_,cljs.core.boolean_QMARK_,cljs.core.nil_QMARK_,cljs.core.inst_QMARK_], null);
 firemore.core.throw_if_unsupported = (function firemore$core$throw_if_unsupported(m){
-var G__29091_29092 = m;
-var G__29091_29093__$1 = (((G__29091_29092 == null))?null:cljs.core.vals.call(null,G__29091_29092));
-var G__29091_29094__$2 = (((G__29091_29093__$1 == null))?null:cljs.core.remove.call(null,(function (v){
-return cljs.core.some.call(null,(function (p1__29090_SHARP_){
-return p1__29090_SHARP_.call(null,v);
+var G__29092_29093 = m;
+var G__29092_29094__$1 = (((G__29092_29093 == null))?null:cljs.core.vals.call(null,G__29092_29093));
+var G__29092_29095__$2 = (((G__29092_29094__$1 == null))?null:cljs.core.remove.call(null,(function (v){
+return cljs.core.some.call(null,(function (p1__29091_SHARP_){
+return p1__29091_SHARP_.call(null,v);
 }),firemore.core.supported_types);
-}),G__29091_29093__$1));
-var G__29091_29095__$3 = (((G__29091_29094__$2 == null))?null:cljs.core.first.call(null,G__29091_29094__$2));
-var G__29091_29096__$4 = (((G__29091_29095__$3 == null))?null:cljs.core.ex_info.call(null,"Unsupported Data",G__29091_29095__$3));
-if((G__29091_29096__$4 == null)){
+}),G__29092_29094__$1));
+var G__29092_29096__$3 = (((G__29092_29095__$2 == null))?null:cljs.core.first.call(null,G__29092_29095__$2));
+var G__29092_29097__$4 = (((G__29092_29096__$3 == null))?null:cljs.core.ex_info.call(null,"Unsupported Data",G__29092_29096__$3));
+if((G__29092_29097__$4 == null)){
 } else {
-throw G__29091_29096__$4;
+throw G__29092_29097__$4;
 }
 
 return m;
@@ -52,14 +52,14 @@ return firemore.firestore.jsonify.call(null,firemore.core.throw_if_unsupported.c
  */
 firemore.core.get = (function firemore$core$get(var_args){
 var args__4742__auto__ = [];
-var len__4736__auto___29103 = arguments.length;
-var i__4737__auto___29104 = (0);
+var len__4736__auto___29104 = arguments.length;
+var i__4737__auto___29105 = (0);
 while(true){
-if((i__4737__auto___29104 < len__4736__auto___29103)){
-args__4742__auto__.push((arguments[i__4737__auto___29104]));
+if((i__4737__auto___29105 < len__4736__auto___29104)){
+args__4742__auto__.push((arguments[i__4737__auto___29105]));
 
-var G__29105 = (i__4737__auto___29104 + (1));
-i__4737__auto___29104 = G__29105;
+var G__29106 = (i__4737__auto___29105 + (1));
+i__4737__auto___29105 = G__29106;
 continue;
 } else {
 }
@@ -70,20 +70,20 @@ var argseq__4743__auto__ = ((((1) < args__4742__auto__.length))?(new cljs.core.I
 return firemore.core.get.cljs$core$IFn$_invoke$arity$variadic((arguments[(0)]),argseq__4743__auto__);
 });
 
-(firemore.core.get.cljs$core$IFn$_invoke$arity$variadic = (function (reference,p__29099){
-var vec__29100 = p__29099;
-var options = cljs.core.nth.call(null,vec__29100,(0),null);
+(firemore.core.get.cljs$core$IFn$_invoke$arity$variadic = (function (reference,p__29100){
+var vec__29101 = p__29100;
+var options = cljs.core.nth.call(null,vec__29101,(0),null);
 return firemore.firestore.get_db.call(null,reference,options);
 }));
 
 (firemore.core.get.cljs$lang$maxFixedArity = (1));
 
 /** @this {Function} */
-(firemore.core.get.cljs$lang$applyTo = (function (seq29097){
-var G__29098 = cljs.core.first.call(null,seq29097);
-var seq29097__$1 = cljs.core.next.call(null,seq29097);
+(firemore.core.get.cljs$lang$applyTo = (function (seq29098){
+var G__29099 = cljs.core.first.call(null,seq29098);
+var seq29098__$1 = cljs.core.next.call(null,seq29098);
 var self__4723__auto__ = this;
-return self__4723__auto__.cljs$core$IFn$_invoke$arity$variadic(G__29098,seq29097__$1);
+return self__4723__auto__.cljs$core$IFn$_invoke$arity$variadic(G__29099,seq29098__$1);
 }));
 
 /**
@@ -103,14 +103,14 @@ return self__4723__auto__.cljs$core$IFn$_invoke$arity$variadic(G__29098,seq29097
  */
 firemore.core.watch = (function firemore$core$watch(var_args){
 var args__4742__auto__ = [];
-var len__4736__auto___29114 = arguments.length;
-var i__4737__auto___29115 = (0);
+var len__4736__auto___29115 = arguments.length;
+var i__4737__auto___29116 = (0);
 while(true){
-if((i__4737__auto___29115 < len__4736__auto___29114)){
-args__4742__auto__.push((arguments[i__4737__auto___29115]));
+if((i__4737__auto___29116 < len__4736__auto___29115)){
+args__4742__auto__.push((arguments[i__4737__auto___29116]));
 
-var G__29116 = (i__4737__auto___29115 + (1));
-i__4737__auto___29115 = G__29116;
+var G__29117 = (i__4737__auto___29116 + (1));
+i__4737__auto___29116 = G__29117;
 continue;
 } else {
 }
@@ -121,13 +121,13 @@ var argseq__4743__auto__ = ((((1) < args__4742__auto__.length))?(new cljs.core.I
 return firemore.core.watch.cljs$core$IFn$_invoke$arity$variadic((arguments[(0)]),argseq__4743__auto__);
 });
 
-(firemore.core.watch.cljs$core$IFn$_invoke$arity$variadic = (function (reference,p__29108){
-var vec__29109 = p__29108;
-var options = cljs.core.nth.call(null,vec__29109,(0),null);
-var map__29112 = firemore.firestore.listen.call(null,reference,options);
-var map__29112__$1 = (((((!((map__29112 == null))))?(((((map__29112.cljs$lang$protocol_mask$partition0$ & (64))) || ((cljs.core.PROTOCOL_SENTINEL === map__29112.cljs$core$ISeq$))))?true:false):false))?cljs.core.apply.call(null,cljs.core.hash_map,map__29112):map__29112);
-var c = cljs.core.get.call(null,map__29112__$1,new cljs.core.Keyword(null,"c","c",-1763192079));
-var unsubscribe = cljs.core.get.call(null,map__29112__$1,new cljs.core.Keyword(null,"unsubscribe","unsubscribe",632650147));
+(firemore.core.watch.cljs$core$IFn$_invoke$arity$variadic = (function (reference,p__29109){
+var vec__29110 = p__29109;
+var options = cljs.core.nth.call(null,vec__29110,(0),null);
+var map__29113 = firemore.firestore.listen.call(null,reference,options);
+var map__29113__$1 = (((((!((map__29113 == null))))?(((((map__29113.cljs$lang$protocol_mask$partition0$ & (64))) || ((cljs.core.PROTOCOL_SENTINEL === map__29113.cljs$core$ISeq$))))?true:false):false))?cljs.core.apply.call(null,cljs.core.hash_map,map__29113):map__29113);
+var c = cljs.core.get.call(null,map__29113__$1,new cljs.core.Keyword(null,"c","c",-1763192079));
+var unsubscribe = cljs.core.get.call(null,map__29113__$1,new cljs.core.Keyword(null,"unsubscribe","unsubscribe",632650147));
 var opts = new cljs.core.PersistentArrayMap(null, 1, [new cljs.core.Keyword(null,"on-close","on-close",-761178394),(function (){
 return unsubscribe.call(null);
 })], null);
@@ -141,11 +141,11 @@ return finalizing_chan;
 (firemore.core.watch.cljs$lang$maxFixedArity = (1));
 
 /** @this {Function} */
-(firemore.core.watch.cljs$lang$applyTo = (function (seq29106){
-var G__29107 = cljs.core.first.call(null,seq29106);
-var seq29106__$1 = cljs.core.next.call(null,seq29106);
+(firemore.core.watch.cljs$lang$applyTo = (function (seq29107){
+var G__29108 = cljs.core.first.call(null,seq29107);
+var seq29107__$1 = cljs.core.next.call(null,seq29107);
 var self__4723__auto__ = this;
-return self__4723__auto__.cljs$core$IFn$_invoke$arity$variadic(G__29107,seq29106__$1);
+return self__4723__auto__.cljs$core$IFn$_invoke$arity$variadic(G__29108,seq29107__$1);
 }));
 
 /**
@@ -157,14 +157,14 @@ return self__4723__auto__.cljs$core$IFn$_invoke$arity$variadic(G__29107,seq29106
  */
 firemore.core.push_BANG_ = (function firemore$core$push_BANG_(var_args){
 var args__4742__auto__ = [];
-var len__4736__auto___29124 = arguments.length;
-var i__4737__auto___29125 = (0);
+var len__4736__auto___29125 = arguments.length;
+var i__4737__auto___29126 = (0);
 while(true){
-if((i__4737__auto___29125 < len__4736__auto___29124)){
-args__4742__auto__.push((arguments[i__4737__auto___29125]));
+if((i__4737__auto___29126 < len__4736__auto___29125)){
+args__4742__auto__.push((arguments[i__4737__auto___29126]));
 
-var G__29126 = (i__4737__auto___29125 + (1));
-i__4737__auto___29125 = G__29126;
+var G__29127 = (i__4737__auto___29126 + (1));
+i__4737__auto___29126 = G__29127;
 continue;
 } else {
 }
@@ -175,22 +175,22 @@ var argseq__4743__auto__ = ((((2) < args__4742__auto__.length))?(new cljs.core.I
 return firemore.core.push_BANG_.cljs$core$IFn$_invoke$arity$variadic((arguments[(0)]),(arguments[(1)]),argseq__4743__auto__);
 });
 
-(firemore.core.push_BANG_.cljs$core$IFn$_invoke$arity$variadic = (function (reference,document,p__29120){
-var vec__29121 = p__29120;
-var options = cljs.core.nth.call(null,vec__29121,(0),null);
+(firemore.core.push_BANG_.cljs$core$IFn$_invoke$arity$variadic = (function (reference,document,p__29121){
+var vec__29122 = p__29121;
+var options = cljs.core.nth.call(null,vec__29122,(0),null);
 return firemore.firestore.add_db_BANG_.call(null,reference,document,options);
 }));
 
 (firemore.core.push_BANG_.cljs$lang$maxFixedArity = (2));
 
 /** @this {Function} */
-(firemore.core.push_BANG_.cljs$lang$applyTo = (function (seq29117){
-var G__29118 = cljs.core.first.call(null,seq29117);
-var seq29117__$1 = cljs.core.next.call(null,seq29117);
-var G__29119 = cljs.core.first.call(null,seq29117__$1);
-var seq29117__$2 = cljs.core.next.call(null,seq29117__$1);
+(firemore.core.push_BANG_.cljs$lang$applyTo = (function (seq29118){
+var G__29119 = cljs.core.first.call(null,seq29118);
+var seq29118__$1 = cljs.core.next.call(null,seq29118);
+var G__29120 = cljs.core.first.call(null,seq29118__$1);
+var seq29118__$2 = cljs.core.next.call(null,seq29118__$1);
 var self__4723__auto__ = this;
-return self__4723__auto__.cljs$core$IFn$_invoke$arity$variadic(G__29118,G__29119,seq29117__$2);
+return self__4723__auto__.cljs$core$IFn$_invoke$arity$variadic(G__29119,G__29120,seq29118__$2);
 }));
 
 /**
@@ -207,14 +207,14 @@ return self__4723__auto__.cljs$core$IFn$_invoke$arity$variadic(G__29118,G__29119
  */
 firemore.core.write_BANG_ = (function firemore$core$write_BANG_(var_args){
 var args__4742__auto__ = [];
-var len__4736__auto___29134 = arguments.length;
-var i__4737__auto___29135 = (0);
+var len__4736__auto___29135 = arguments.length;
+var i__4737__auto___29136 = (0);
 while(true){
-if((i__4737__auto___29135 < len__4736__auto___29134)){
-args__4742__auto__.push((arguments[i__4737__auto___29135]));
+if((i__4737__auto___29136 < len__4736__auto___29135)){
+args__4742__auto__.push((arguments[i__4737__auto___29136]));
 
-var G__29136 = (i__4737__auto___29135 + (1));
-i__4737__auto___29135 = G__29136;
+var G__29137 = (i__4737__auto___29136 + (1));
+i__4737__auto___29136 = G__29137;
 continue;
 } else {
 }
@@ -225,22 +225,22 @@ var argseq__4743__auto__ = ((((2) < args__4742__auto__.length))?(new cljs.core.I
 return firemore.core.write_BANG_.cljs$core$IFn$_invoke$arity$variadic((arguments[(0)]),(arguments[(1)]),argseq__4743__auto__);
 });
 
-(firemore.core.write_BANG_.cljs$core$IFn$_invoke$arity$variadic = (function (reference,document,p__29130){
-var vec__29131 = p__29130;
-var options = cljs.core.nth.call(null,vec__29131,(0),null);
+(firemore.core.write_BANG_.cljs$core$IFn$_invoke$arity$variadic = (function (reference,document,p__29131){
+var vec__29132 = p__29131;
+var options = cljs.core.nth.call(null,vec__29132,(0),null);
 return firemore.firestore.set_db_BANG_.call(null,reference,document,options);
 }));
 
 (firemore.core.write_BANG_.cljs$lang$maxFixedArity = (2));
 
 /** @this {Function} */
-(firemore.core.write_BANG_.cljs$lang$applyTo = (function (seq29127){
-var G__29128 = cljs.core.first.call(null,seq29127);
-var seq29127__$1 = cljs.core.next.call(null,seq29127);
-var G__29129 = cljs.core.first.call(null,seq29127__$1);
-var seq29127__$2 = cljs.core.next.call(null,seq29127__$1);
+(firemore.core.write_BANG_.cljs$lang$applyTo = (function (seq29128){
+var G__29129 = cljs.core.first.call(null,seq29128);
+var seq29128__$1 = cljs.core.next.call(null,seq29128);
+var G__29130 = cljs.core.first.call(null,seq29128__$1);
+var seq29128__$2 = cljs.core.next.call(null,seq29128__$1);
 var self__4723__auto__ = this;
-return self__4723__auto__.cljs$core$IFn$_invoke$arity$variadic(G__29128,G__29129,seq29127__$2);
+return self__4723__auto__.cljs$core$IFn$_invoke$arity$variadic(G__29129,G__29130,seq29128__$2);
 }));
 
 /**
@@ -257,14 +257,14 @@ return self__4723__auto__.cljs$core$IFn$_invoke$arity$variadic(G__29128,G__29129
  */
 firemore.core.merge_BANG_ = (function firemore$core$merge_BANG_(var_args){
 var args__4742__auto__ = [];
-var len__4736__auto___29144 = arguments.length;
-var i__4737__auto___29145 = (0);
+var len__4736__auto___29145 = arguments.length;
+var i__4737__auto___29146 = (0);
 while(true){
-if((i__4737__auto___29145 < len__4736__auto___29144)){
-args__4742__auto__.push((arguments[i__4737__auto___29145]));
+if((i__4737__auto___29146 < len__4736__auto___29145)){
+args__4742__auto__.push((arguments[i__4737__auto___29146]));
 
-var G__29146 = (i__4737__auto___29145 + (1));
-i__4737__auto___29145 = G__29146;
+var G__29147 = (i__4737__auto___29146 + (1));
+i__4737__auto___29146 = G__29147;
 continue;
 } else {
 }
@@ -275,22 +275,22 @@ var argseq__4743__auto__ = ((((2) < args__4742__auto__.length))?(new cljs.core.I
 return firemore.core.merge_BANG_.cljs$core$IFn$_invoke$arity$variadic((arguments[(0)]),(arguments[(1)]),argseq__4743__auto__);
 });
 
-(firemore.core.merge_BANG_.cljs$core$IFn$_invoke$arity$variadic = (function (reference,document,p__29140){
-var vec__29141 = p__29140;
-var options = cljs.core.nth.call(null,vec__29141,(0),null);
+(firemore.core.merge_BANG_.cljs$core$IFn$_invoke$arity$variadic = (function (reference,document,p__29141){
+var vec__29142 = p__29141;
+var options = cljs.core.nth.call(null,vec__29142,(0),null);
 return firemore.firestore.update_db_BANG_.call(null,reference,document,options);
 }));
 
 (firemore.core.merge_BANG_.cljs$lang$maxFixedArity = (2));
 
 /** @this {Function} */
-(firemore.core.merge_BANG_.cljs$lang$applyTo = (function (seq29137){
-var G__29138 = cljs.core.first.call(null,seq29137);
-var seq29137__$1 = cljs.core.next.call(null,seq29137);
-var G__29139 = cljs.core.first.call(null,seq29137__$1);
-var seq29137__$2 = cljs.core.next.call(null,seq29137__$1);
+(firemore.core.merge_BANG_.cljs$lang$applyTo = (function (seq29138){
+var G__29139 = cljs.core.first.call(null,seq29138);
+var seq29138__$1 = cljs.core.next.call(null,seq29138);
+var G__29140 = cljs.core.first.call(null,seq29138__$1);
+var seq29138__$2 = cljs.core.next.call(null,seq29138__$1);
 var self__4723__auto__ = this;
-return self__4723__auto__.cljs$core$IFn$_invoke$arity$variadic(G__29138,G__29139,seq29137__$2);
+return self__4723__auto__.cljs$core$IFn$_invoke$arity$variadic(G__29139,G__29140,seq29138__$2);
 }));
 
 /**
@@ -306,14 +306,14 @@ return self__4723__auto__.cljs$core$IFn$_invoke$arity$variadic(G__29138,G__29139
  */
 firemore.core.delete_BANG_ = (function firemore$core$delete_BANG_(var_args){
 var args__4742__auto__ = [];
-var len__4736__auto___29153 = arguments.length;
-var i__4737__auto___29154 = (0);
+var len__4736__auto___29154 = arguments.length;
+var i__4737__auto___29155 = (0);
 while(true){
-if((i__4737__auto___29154 < len__4736__auto___29153)){
-args__4742__auto__.push((arguments[i__4737__auto___29154]));
+if((i__4737__auto___29155 < len__4736__auto___29154)){
+args__4742__auto__.push((arguments[i__4737__auto___29155]));
 
-var G__29155 = (i__4737__auto___29154 + (1));
-i__4737__auto___29154 = G__29155;
+var G__29156 = (i__4737__auto___29155 + (1));
+i__4737__auto___29155 = G__29156;
 continue;
 } else {
 }
@@ -324,20 +324,20 @@ var argseq__4743__auto__ = ((((1) < args__4742__auto__.length))?(new cljs.core.I
 return firemore.core.delete_BANG_.cljs$core$IFn$_invoke$arity$variadic((arguments[(0)]),argseq__4743__auto__);
 });
 
-(firemore.core.delete_BANG_.cljs$core$IFn$_invoke$arity$variadic = (function (reference,p__29149){
-var vec__29150 = p__29149;
-var options = cljs.core.nth.call(null,vec__29150,(0),null);
+(firemore.core.delete_BANG_.cljs$core$IFn$_invoke$arity$variadic = (function (reference,p__29150){
+var vec__29151 = p__29150;
+var options = cljs.core.nth.call(null,vec__29151,(0),null);
 return firemore.firestore.delete_db_BANG_.call(null,reference,options);
 }));
 
 (firemore.core.delete_BANG_.cljs$lang$maxFixedArity = (1));
 
 /** @this {Function} */
-(firemore.core.delete_BANG_.cljs$lang$applyTo = (function (seq29147){
-var G__29148 = cljs.core.first.call(null,seq29147);
-var seq29147__$1 = cljs.core.next.call(null,seq29147);
+(firemore.core.delete_BANG_.cljs$lang$applyTo = (function (seq29148){
+var G__29149 = cljs.core.first.call(null,seq29148);
+var seq29148__$1 = cljs.core.next.call(null,seq29148);
 var self__4723__auto__ = this;
-return self__4723__auto__.cljs$core$IFn$_invoke$arity$variadic(G__29148,seq29147__$1);
+return self__4723__auto__.cljs$core$IFn$_invoke$arity$variadic(G__29149,seq29148__$1);
 }));
 
 firemore.core.transact_BANG_ = (function firemore$core$transact_BANG_(update_fx){

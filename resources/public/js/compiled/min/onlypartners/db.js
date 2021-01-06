@@ -14,12 +14,12 @@ onlypartners.db.select_plan = (function onlypartners$db$select_plan(id){
 return cljs.core.swap_BANG_.call(null,onlypartners.db.db,cljs.core.assoc,new cljs.core.Keyword(null,"selected-plan","selected-plan",210054588),id);
 });
 onlypartners.db.selected_plan = (function onlypartners$db$selected_plan(){
-var map__23196 = cljs.core.deref.call(null,onlypartners.db.db);
-var map__23196__$1 = (((((!((map__23196 == null))))?(((((map__23196.cljs$lang$protocol_mask$partition0$ & (64))) || ((cljs.core.PROTOCOL_SENTINEL === map__23196.cljs$core$ISeq$))))?true:false):false))?cljs.core.apply.call(null,cljs.core.hash_map,map__23196):map__23196);
-var selected_plan = cljs.core.get.call(null,map__23196__$1,new cljs.core.Keyword(null,"selected-plan","selected-plan",210054588));
-var plans = cljs.core.get.call(null,map__23196__$1,new cljs.core.Keyword(null,"plans","plans",75657163));
-return cljs.core.first.call(null,cljs.core.filter.call(null,(function (p1__23195_SHARP_){
-return cljs.core._EQ_.call(null,selected_plan,new cljs.core.Keyword(null,"id","id",-1388402092).cljs$core$IFn$_invoke$arity$1(p1__23195_SHARP_));
+var map__23197 = cljs.core.deref.call(null,onlypartners.db.db);
+var map__23197__$1 = (((((!((map__23197 == null))))?(((((map__23197.cljs$lang$protocol_mask$partition0$ & (64))) || ((cljs.core.PROTOCOL_SENTINEL === map__23197.cljs$core$ISeq$))))?true:false):false))?cljs.core.apply.call(null,cljs.core.hash_map,map__23197):map__23197);
+var selected_plan = cljs.core.get.call(null,map__23197__$1,new cljs.core.Keyword(null,"selected-plan","selected-plan",210054588));
+var plans = cljs.core.get.call(null,map__23197__$1,new cljs.core.Keyword(null,"plans","plans",75657163));
+return cljs.core.first.call(null,cljs.core.filter.call(null,(function (p1__23196_SHARP_){
+return cljs.core._EQ_.call(null,selected_plan,new cljs.core.Keyword(null,"id","id",-1388402092).cljs$core$IFn$_invoke$arity$1(p1__23196_SHARP_));
 }),plans));
 });
 onlypartners.db.report_error = (function onlypartners$db$report_error(error){
