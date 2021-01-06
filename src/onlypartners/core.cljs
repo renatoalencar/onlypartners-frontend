@@ -10,7 +10,8 @@
             [onlypartners.db :as db]
             [onlypartners.router :as router]
             [onlypartners.util :as util]
-            [onlypartners.payment :as payment])
+            [onlypartners.payment :as payment]
+            [onlypartners.analytics :as analytics])
   (:require-macros [cljs.core.async.macros :refer [go]]))
 
 (enable-console-print!)
