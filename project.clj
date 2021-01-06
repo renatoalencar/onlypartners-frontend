@@ -35,7 +35,7 @@
 
                 :compiler     {:main                 onlypartners.core
                                :target               :bundle
-                               :asset-path           "js/compiled/out"
+                               :asset-path           "/js/compiled/out"
                                :output-to            "resources/public/js/compiled/out/index.js"
                                :output-dir           "resources/public/js/compiled/out"
                                :bundle-cmd           {:none    ["npx.cmd" "webpack" "--mode=development"]
@@ -51,7 +51,7 @@
                 :source-paths ["src"]
                 :compiler     {:main       onlypartners.core
                                :target     :bundle
-                               :asset-path "js/compiled/min"
+                               :asset-path "/js/compiled/min"
                                :output-to  "resources/public/js/compiled/min/index.js"
                                :output-dir "resources/public/js/compiled/min"
                                :bundle-cmd {:none    ["npx" "webpack" "--mode=production"]
@@ -72,7 +72,7 @@
 
              ;; doesn't work for you just run your own server :) (see lein-ring)
 
-             ;; :ring-handler hello_world.server/handler
+             :ring-handler user/ring-handler
 
              ;; To be able to open files in your editor from the heads up display
              ;; you will need to put a script on your path.

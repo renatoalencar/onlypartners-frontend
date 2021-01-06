@@ -18,6 +18,13 @@
 ;; tools.namespace https://github.com/clojure/tools.namespace
 ;; and Component https://github.com/stuartsierra/component
 
+(defn ring-handler
+  [req]
+  (if (re-matches #"/subscribe/[a-zA-Z]+" (:uri req))
+    {:status 200
+     :headers {"Content-Type" "text/html"}
+     :body (slurp (clojure.java.io/resource "public/subscribe.html"))}
+    nil))
 
 (defn fig-start
   "This starts the figwheel server and watch based auto-compiler."
