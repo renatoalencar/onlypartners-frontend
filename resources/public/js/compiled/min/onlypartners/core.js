@@ -42,7 +42,7 @@ onlypartners.analytics.track.call(null,new cljs.core.Keyword(null,"select-plan",
 return onlypartners.router.go.call(null,new cljs.core.Keyword(null,"step","step",1288888124),new cljs.core.Keyword(null,"payment","payment",-1682035288));
 })], null),"Assinar"], null)], null);
 });
-onlypartners.payment.set_public_key.call(null,"TEST-21ee96e7-5cab-40a3-959c-7da1a0adbd2a");
+onlypartners.payment.set_public_key.call(null,"[REDACTED]");
 onlypartners.core.submit = (function onlypartners$core$submit(event){
 event.preventDefault();
 
@@ -449,7 +449,7 @@ var script = document.createElement("script");
 
 (script.async = true);
 
-(script.dataset.telegramLogin = "new_agent_773_bot");
+(script.dataset.telegramLogin = "[REDACTED]");
 
 (script.dataset.size = "large");
 
@@ -523,7 +523,7 @@ if((state_val_29367 === (1))){
 var inst_29344 = (state_29366[(7)]);
 var inst_29342 = (state_29366[(8)]);
 var inst_29335 = [new cljs.core.Keyword(null,"api-key","api-key",1037904031),new cljs.core.Keyword(null,"project-id","project-id",206449307)];
-var inst_29336 = ["AIzaSyDdGlT3chqZXptsT82H6jSvLKhvs0FqiME","only-partners"];
+var inst_29336 = ["[REDACTED]","[REDACTED]"];
 var inst_29337 = cljs.core.PersistentHashMap.fromArrays(inst_29335,inst_29336);
 var inst_29338 = firemore.firebase.initialize.call(null,inst_29337);
 var inst_29342__$1 = cljs.core.re_matches.call(null,/\/subscribe\/(?<groupid>[a-zA-Z]+)/,location.pathname);
