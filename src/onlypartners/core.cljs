@@ -38,7 +38,7 @@
                   (router/go :step :payment))}
     "Assinar"]])
 
-(payment/set-public-key "TEST-21ee96e7-5cab-40a3-959c-7da1a0adbd2a")
+(payment/set-public-key "[REDACTED]")
 
 (defn submit [event]
   (.preventDefault event)
@@ -96,7 +96,7 @@
   (let [script (.createElement js/document "script")]
     (set! (.-src script) "https://telegram.org/js/telegram-widget.js?14")
     (set! (.-async script) true)
-    (set! (-> script .-dataset .-telegramLogin) "new_agent_773_bot")
+    (set! (-> script .-dataset .-telegramLogin) "[REDACTED]")
     (set! (-> script .-dataset .-size) "large")
     (set! (-> script .-dataset .-onauth) "onlypartners.core.create_subscription(user)")
     (set! (-> script .-dataset .-requestAccess) "write")
@@ -135,8 +135,8 @@
                      (util/attach db/db)))
 
 (go
-  (firemore.firebase/initialize {:api-key    "AIzaSyDdGlT3chqZXptsT82H6jSvLKhvs0FqiME"
-                                 :project-id "only-partners"})
+  (firemore.firebase/initialize {:api-key    "[REDACTED]"
+                                 :project-id "[REDACTED]"})
 
   (let [[_ group-id] (re-matches #"/subscribe/(?<groupid>[a-zA-Z]+)" js/location.pathname)
         group (async/<! (firemore/get [:groups group-id]))

@@ -1,10 +1,14 @@
-# onlypartners
+# onlypartners frontend
 
-FIXME: Write a one-line description of your library/project.
+Only Partners was an attempt of building a small side business while I was unemployed,
+the idea was to provide a tool for people building communities on Telegram groups to
+charge for the participants to join the group.
 
 ## Overview
 
-FIXME: Write a paragraph about the library/project and highlight its goals.
+This is a ClojureScript project with Reagent, I was learning Clojure and ClojureScript at
+the time and would like to apply to something cool I'd build. Unfortunately, after finally
+finding a new job I could't dedicate time this small project and ended up being forgotten.
 
 ## Setup
 
@@ -35,6 +39,6 @@ get live reloading, nor a REPL.
 
 ## License
 
-Copyright © 2014 FIXME
+Copyright @ 2021 Renato Alencar
 
-Distributed under the Eclipse Public License either version 1.0 or (at your option) any later version.
+Licensed under the terms of the MIT license.
